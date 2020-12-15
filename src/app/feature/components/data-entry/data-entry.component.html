@@ -1,55 +1,79 @@
-<form [formGroup]="form" class="row g-3">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3">
   <div class="form-group col-md-6">
-    <label for="firstName" class="form-label">First Name</label>
-    <input type="text" formControlName="firstName" class="form-control" id="firstName">
-  </div>
-  <div class="form-group col-md-6">
-    <label for="lastName" class="form-label">Last Name</label>
-    <input type="text" formControlName="lastName" class="form-control" id="lastName">
-  </div>
-
-  <div class="form-group col-md-6">
-    <label for="ssn" class="form-label">SSN</label>
-    <input type="text" formControlName="ssn" class="form-control" id="ssn"
-      (input)="onInput('ssn', $event)">
+    <label for="firstName" class="form-label">{{'fields.firstName.label'|translate}}</label>
+    <input type="text" formControlName="firstName" class="form-control" id="firstName" maxlength="30">
+    <app-control-error [control]="form.get('firstName')"
+      [fieldErrorsMap]="'fields.firstName.errors'|translate">
+    </app-control-error>
   </div>
 
   <div class="form-group col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" formControlName="email" class="form-control" id="inputEmail4">
+    <label for="lastName" class="form-label">{{'fields.lastName.label'|translate}}</label>
+    <input type="text" formControlName="lastName" class="form-control" id="lastName" maxlength="30">
+    <app-control-error [control]="form.get('lastName')"
+      [fieldErrorsMap]="'fields.lastName.errors'|translate">
+    </app-control-error>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label for="ssn" class="form-label">{{'fields.ssn.label'|translate}}</label>
+    <input type="text" formControlName="ssn" class="form-control" id="ssn" maxlength="11"
+      [attr.placeholder]="'fields.ssn.placeholder'|translate" (input)="onInput('ssn', $event)">
+    <app-control-error [control]="form.get('ssn')" [fieldErrorsMap]="'fields.ssn.errors'|translate">
+    </app-control-error>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label for="personal-email" class="form-label">{{'fields.personalEmail.label'|translate}}</label>
+    <input type="email" formControlName="email" class="form-control" id="personal-email" maxlength="128"
+      [attr.placeholder]="'fields.personalEmail.placeholder'|translate">
+    <app-control-error [control]="form.get('email')"
+      [fieldErrorsMap]="'fields.personalEmail.errors'|translate">
+    </app-control-error>
   </div>
 
   <div class="form-group col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label for="addressLine1" class="form-label">{{'fields.addressLine1.label'|translate}}</label>
+    <input type="text" formControlName="addressLine1" class="form-control" id="addressLine1"
+      [attr.placeholder]="'fields.addressLine1.placeholder'|translate">
+    <app-control-error [control]="form.get('addressLine1')"
+      [fieldErrorsMap]="'fields.addressLine1.errors'|translate">
+    </app-control-error>
   </div>
+
   <div class="form-group col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="addressLine2" class="form-label">{{'fields.addressLine2.label'|translate}}</label>
+    <input type="text" formControlName="addressLine2" class="form-control" id="addressLine1"
+      [attr.placeholder]="'fields.addressLine2.placeholder'|translate">
+    <app-control-error [control]="form.get('addressLine2')"
+      [fieldErrorsMap]="'fields.addressLine2.errors'|translate">
+    </app-control-error>
   </div>
-  <div class="form-group col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
+
+  <div class="form-group col-12">
+    <label for="city" class="form-label">{{'fields.city.label'|translate}}</label>
+    <input type="text" formControlName="city" class="form-control" id="city"
+      [attr.placeholder]="'fields.city.placeholder'|translate">
+    <app-control-error [control]="form.get('city')" [fieldErrorsMap]="'fields.city.errors'|translate">
+    </app-control-error>
   </div>
+
   <div class="form-group col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-control">
-      <option selected>Choose...</option>
+    <label for="state" class="form-label">{{'fields.state.label'|translate}}</label>
+    <select id="state" formControlName="state" class="form-control">
+      <option value="null" selected>Choose...</option>
       <option value="TX">Texas</option>
     </select>
-  </div>
-  <div class="form-group col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
+    <app-control-error [control]="form.get('state')" [fieldErrorsMap]="'fields.state.errors'|translate">
+    </app-control-error>
   </div>
 
-  <div class="form-group col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
+  <div class="form-group col-sm-12 col-md-4 col-lg-3">
+    <label for="zip" class="form-label">{{'fields.zip.label'|translate}}</label>
+    <input type="text" formControlName="zip" class="form-control" id="city"
+      [attr.placeholder]="'fields.zip.placeholder'|translate">
+    <app-control-error [control]="form.get('zip')" [fieldErrorsMap]="'fields.zip.errors'|translate">
+    </app-control-error>
   </div>
 
   <div class="col-12">

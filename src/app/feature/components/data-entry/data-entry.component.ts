@@ -14,6 +14,12 @@ export class DataEntryComponent extends Base implements OnInit {
     this.form = this.createForm();
   }
 
+  onSubmit(): void {
+    this.form.markAllAsTouched();
+    console.log('Form valid: ', this.form.valid);
+    console.log('Form data: ', this.form.value);
+  }
+
   createForm(): FormGroup {
     return new FormGroup({
       firstName: this.formControl([
@@ -25,7 +31,12 @@ export class DataEntryComponent extends Base implements OnInit {
         DataValidators.lastName,
       ]),
       ssn: this.formControl([Validators.required, DataValidators.ssn]),
-      email: this.formControl([Validators.email]),
+      email: this.formControl([Validators.required, Validators.email]),
+      addressLine1: this.formControl([Validators.required]),
+      addressLine2: this.formControl([]),
+      city: this.formControl([Validators.required]),
+      state: this.formControl([Validators.required]),
+      zip: this.formControl([Validators.required]),
     });
   }
 }
