@@ -100,8 +100,8 @@ export class Utils {
       return `${first}-${middle}-${last}`;
     } else if (input.length > 2) {
       return `${first}-${middle}`;
-    } else if (input.length > 0) {
-      return `${first}`;
+    } else {
+      return first;
     }
   }
 
@@ -117,7 +117,7 @@ export class Utils {
       return `${first}-${middle}-${last}`;
     } else if (input.length > 2) {
       return `${first}-${middle}`;
-    } else if (input.length > 0) {
+    } else {
       return `${first}`;
     }
   }
@@ -134,7 +134,7 @@ export class Utils {
       return `${first}/${middle}/${last}`;
     } else if (input.length > 1) {
       return `${first}/${middle}`;
-    } else if (input.length > 0) {
+    } else {
       return `${first}`;
     }
   }
@@ -148,7 +148,7 @@ export class Utils {
     const last = input.substring(5, 9);
     if (input.length > 5) {
       return `${first}-${last}`;
-    } else if (input.length > 0) {
+    } else {
       return `${first}`;
     }
   }
@@ -163,7 +163,7 @@ export class Utils {
     const last = input.substring(3, 6);
     if (input.length > 2) {
       return `${first} ${last}`;
-    } else if (input.length > 0) {
+    } else {
       return `${first}`;
     }
   }

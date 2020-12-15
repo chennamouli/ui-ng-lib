@@ -12,4 +12,32 @@ export class Base {
   getErrors(form: FormGroup) {
     return Utils.getFormValidationErrors(form);
   }
+
+  onInput(formatType: string, event: any): void {
+    // console.log('On input event ', event);
+    if (['insertText', 'insertFromPaste'].includes(event.inputType)) {
+      event.target.value = this.formatInput(formatType, event.target.value);
+    }
+  }
+
+  formatInput(formatType: string, input: string): string {
+    switch (formatType) {
+      case 'integer':
+        return Utils.formatNumber(input);
+      case 'ssn':
+        return Utils.formatSSN(input);
+      case 'phone':
+        return Utils.formatPhoneNumber(input);
+      case 'sin':
+        return Utils.formatSIN(input);
+      case 'zip':
+        return Utils.formatZip(input);
+      case 'postal':
+        return Utils.formatPostalCode(input);
+      case 'city':
+        return Utils.formatCity(input);
+      default:
+        return input;
+    }
+  }
 }

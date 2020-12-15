@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, Validators } from '@angular/forms';
+import { DataValidators } from '../../validators/data-validators';
 import { Base } from '../base/base';
 @Component({
   selector: 'app-data-entry',
@@ -15,9 +16,16 @@ export class DataEntryComponent extends Base implements OnInit {
 
   createForm(): FormGroup {
     return new FormGroup({
-      firstName: this.formControl([Validators.required]),
-      lastName: this.formControl([Validators.required]),
-      email: new FormControl(null, Validators.email),
+      firstName: this.formControl([
+        Validators.required,
+        DataValidators.firstName,
+      ]),
+      lastName: this.formControl([
+        Validators.required,
+        DataValidators.lastName,
+      ]),
+      ssn: this.formControl([Validators.required, DataValidators.ssn]),
+      email: this.formControl([Validators.email]),
     });
   }
 }

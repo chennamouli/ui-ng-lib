@@ -72,7 +72,7 @@ export const defaultHTTPHeaders: object = {
   'Content-Type': 'application/json',
 };
 
-export const fieldErrors: any = {
+export const defaultFieldErrors: any = {
   required: 'Required field',
   minlength: 'Must be at least {1} character',
   maxlength: 'Cannot be greater than {1} characters',
