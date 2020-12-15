@@ -1,0 +1,31 @@
+{
+  "app-title": "ui-ng-lib",
+
+  "fields": {
+    "firstName": {
+      "label": "First Name",
+      "placeholder": "",
+      "maxlength": 30,
+      "errors": {
+        "invalid": "Remove the invalid characters: {0}"
+      }
+    },
+    "middleName": {
+      "label": "Middle Name",
+      "labelOptionalText": "(Optional)",
+      "placeholder": "",
+      "maxlength": 30,
+      "errors": {
+        "invalid": "Remove the invalid characters: {0}"
+      }
+    },
+    "lastName": {
+      "label": "Last Name",
+      "placeholder": "",
+      "maxlength": 30,
+      "errors": {
+        "invalid": "Remove the invalid characters: {0}"
+      }
+    }
+  }
+}
