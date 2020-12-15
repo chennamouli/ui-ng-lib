@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { defaultHTTPHeaders } from 'src/app/shared/constants';
+import { defaultHTTPHeaders } from 'src/app/shared/utils/constants';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

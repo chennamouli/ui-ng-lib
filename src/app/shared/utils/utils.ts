@@ -1,7 +1,7 @@
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import { AbstractControl, FormGroup, ValidationErrors } from '@angular/forms';
 import { NgbDate, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
-import { KeyValuePair } from '../shared/model/key-value-pair';
+import { KeyValuePair } from '../model/key-value-pair';
 import { RegExps } from './constants';
 
 export class Utils {

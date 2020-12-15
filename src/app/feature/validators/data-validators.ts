@@ -3,8 +3,8 @@ import {
   invalidSINValues,
   invalidSSNValues,
   RegExps,
-} from 'src/app/shared/constants';
-import { Utils } from 'src/app/shared/utils';
+} from 'src/app/shared/utils/constants';
+import { Utils } from 'src/app/shared/utils/utils';
 
 export class DataValidators {
   static firstName(fc: FormControl) {

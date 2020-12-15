@@ -1,6 +1,5 @@
 import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
-import { Utils } from 'src/app/shared/utils';
-
+import { Utils } from 'src/app/shared/utils/utils';
 export class Base {
   formControl(validators: Array<any>, value: any = null) {
     return new FormControl(value, {
