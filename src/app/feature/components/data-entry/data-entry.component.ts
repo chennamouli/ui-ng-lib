@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
+import { DummyApiService } from '../../services/dummy-api/dummy-api.service';
 import { DataValidators } from '../../validators/data-validators';
 import { Base } from '../base/base';
 @Component({
@@ -8,6 +9,10 @@ import { Base } from '../base/base';
   styleUrls: ['./data-entry.component.scss'],
 })
 export class DataEntryComponent extends Base implements OnInit {
+  constructor(public service: DummyApiService) {
+    super();
+  }
+
   form: FormGroup;
 
   ngOnInit(): void {
@@ -18,6 +23,7 @@ export class DataEntryComponent extends Base implements OnInit {
     this.form.markAllAsTouched();
     console.log('Form valid: ', this.form.valid);
     console.log('Form data: ', this.form.value);
+    this.service.getPosts().subscribe((data) => console.log(data));
   }
 
   createForm(): FormGroup {

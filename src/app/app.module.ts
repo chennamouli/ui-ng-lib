@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { httpInterceptorProviders } from './core/http-interceptors';
 import { DataEntryComponent } from './feature/components/data-entry/data-entry.component';
 import { HomeComponent } from './feature/components/home/home.component';
 
@@ -38,7 +39,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     SharedModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
