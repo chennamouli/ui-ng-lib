@@ -1,4 +1,4 @@
-import { FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
 import { Utils } from 'src/app/shared/utils';
 
 export class Base {
@@ -11,6 +11,10 @@ export class Base {
 
   getErrors(form: FormGroup) {
     return Utils.getFormValidationErrors(form);
+  }
+
+  isControlValid(control: AbstractControl): boolean {
+    return control && control.touched && control.invalid;
   }
 
   onInput(formatType: string, event: any): void {

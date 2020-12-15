@@ -36,7 +36,7 @@ export class DataEntryComponent extends Base implements OnInit {
       addressLine2: this.formControl([]),
       city: this.formControl([Validators.required]),
       state: this.formControl([Validators.required]),
-      zip: this.formControl([Validators.required]),
+      zip: this.formControl([Validators.required, DataValidators.zip]),
     });
   }
 }

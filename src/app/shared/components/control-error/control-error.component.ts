@@ -62,6 +62,8 @@ export class ControlErrorComponent implements OnInit {
         Array.isArray(errors['invalid'])
       ) {
         return (defaultFieldErrors.invalid as string).format(errors['invalid']);
+      } else if (errors.hasOwnProperty('invalid')) {
+        return defaultFieldErrors.invalid;
       } else {
         return defaultFieldErrors.message || '';
       }

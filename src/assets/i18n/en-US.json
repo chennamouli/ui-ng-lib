@@ -5,7 +5,6 @@
     "firstName": {
       "label": "First Name",
       "placeholder": "",
-      "maxlength": 30,
       "errors": {
         "invalid": "Remove the invalid characters: {0}"
       }
@@ -14,7 +13,6 @@
       "label": "Middle Name",
       "labelOptionalText": "(Optional)",
       "placeholder": "",
-      "maxlength": 30,
       "errors": {
         "invalid": "Remove the invalid characters: {0}"
       }
@@ -22,7 +20,6 @@
     "lastName": {
       "label": "Last Name",
       "placeholder": "",
-      "maxlength": 30,
       "errors": {
         "invalid": "Remove the invalid characters: {0}"
       }
@@ -55,7 +52,6 @@
     },
     "city": {
       "label": "City",
-      "formatType": "city",
       "placeholder": "",
       "errors": {}
     },
@@ -66,7 +62,6 @@
     },
     "zip": {
       "label": "ZIP Code",
-      "formatType": "zip",
       "placeholder": "",
       "errors": {}
     }

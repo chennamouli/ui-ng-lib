@@ -1,6 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3">
   <div class="form-group col-md-6">
-    <label for="firstName" class="form-label">{{'fields.firstName.label'|translate}}</label>
+    <label for="firstName" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('firstName'))}">{{'fields.firstName.label'|translate}}</label>
     <input type="text" formControlName="firstName" class="form-control" id="firstName" maxlength="30">
     <app-control-error [control]="form.get('firstName')"
       [fieldErrorsMap]="'fields.firstName.errors'|translate">
@@ -8,7 +9,8 @@
   </div>
 
   <div class="form-group col-md-6">
-    <label for="lastName" class="form-label">{{'fields.lastName.label'|translate}}</label>
+    <label for="lastName" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('lastName'))}">{{'fields.lastName.label'|translate}}</label>
     <input type="text" formControlName="lastName" class="form-control" id="lastName" maxlength="30">
     <app-control-error [control]="form.get('lastName')"
       [fieldErrorsMap]="'fields.lastName.errors'|translate">
@@ -16,7 +18,8 @@
   </div>
 
   <div class="form-group col-md-6">
-    <label for="ssn" class="form-label">{{'fields.ssn.label'|translate}}</label>
+    <label for="ssn" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('ssn'))}">{{'fields.ssn.label'|translate}}</label>
     <input type="text" formControlName="ssn" class="form-control" id="ssn" maxlength="11"
       [attr.placeholder]="'fields.ssn.placeholder'|translate" (input)="onInput('ssn', $event)">
     <app-control-error [control]="form.get('ssn')" [fieldErrorsMap]="'fields.ssn.errors'|translate">
@@ -24,7 +27,8 @@
   </div>
 
   <div class="form-group col-md-6">
-    <label for="personal-email" class="form-label">{{'fields.personalEmail.label'|translate}}</label>
+    <label for="personal-email" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('email'))}">{{'fields.personalEmail.label'|translate}}</label>
     <input type="email" formControlName="email" class="form-control" id="personal-email" maxlength="128"
       [attr.placeholder]="'fields.personalEmail.placeholder'|translate">
     <app-control-error [control]="form.get('email')"
@@ -33,7 +37,8 @@
   </div>
 
   <div class="form-group col-12">
-    <label for="addressLine1" class="form-label">{{'fields.addressLine1.label'|translate}}</label>
+    <label for="addressLine1" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('addressLine1'))}">{{'fields.addressLine1.label'|translate}}</label>
     <input type="text" formControlName="addressLine1" class="form-control" id="addressLine1"
       [attr.placeholder]="'fields.addressLine1.placeholder'|translate">
     <app-control-error [control]="form.get('addressLine1')"
@@ -42,7 +47,8 @@
   </div>
 
   <div class="form-group col-12">
-    <label for="addressLine2" class="form-label">{{'fields.addressLine2.label'|translate}}</label>
+    <label for="addressLine2" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('addressLine2'))}">{{'fields.addressLine2.label'|translate}}</label>
     <input type="text" formControlName="addressLine2" class="form-control" id="addressLine1"
       [attr.placeholder]="'fields.addressLine2.placeholder'|translate">
     <app-control-error [control]="form.get('addressLine2')"
@@ -51,7 +57,8 @@
   </div>
 
   <div class="form-group col-12">
-    <label for="city" class="form-label">{{'fields.city.label'|translate}}</label>
+    <label for="city" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('city'))}">{{'fields.city.label'|translate}}</label>
     <input type="text" formControlName="city" class="form-control" id="city"
       [attr.placeholder]="'fields.city.placeholder'|translate">
     <app-control-error [control]="form.get('city')" [fieldErrorsMap]="'fields.city.errors'|translate">
@@ -59,7 +66,8 @@
   </div>
 
   <div class="form-group col-md-4">
-    <label for="state" class="form-label">{{'fields.state.label'|translate}}</label>
+    <label for="state" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('state'))}">{{'fields.state.label'|translate}}</label>
     <select id="state" formControlName="state" class="form-control">
       <option value="null" selected>Choose...</option>
       <option value="TX">Texas</option>
@@ -69,9 +77,10 @@
   </div>
 
   <div class="form-group col-sm-12 col-md-4 col-lg-3">
-    <label for="zip" class="form-label">{{'fields.zip.label'|translate}}</label>
-    <input type="text" formControlName="zip" class="form-control" id="city"
-      [attr.placeholder]="'fields.zip.placeholder'|translate">
+    <label for="zip" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('zip'))}">{{'fields.zip.label'|translate}}</label>
+    <input type="text" formControlName="zip" class="form-control" id="zip" maxlength="5"
+      [attr.placeholder]="'fields.zip.placeholder'|translate" (input)="onInput('zip', $event)">
     <app-control-error [control]="form.get('zip')" [fieldErrorsMap]="'fields.zip.errors'|translate">
     </app-control-error>
   </div>

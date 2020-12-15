@@ -78,6 +78,6 @@ export const defaultFieldErrors: any = {
   maxlength: 'Cannot be greater than {1} characters',
   requiredBefore: 'Date cannot be before {1}',
   requiredAfter: 'Date cannot be after {1}',
-  invalid: 'Enter a valid {0}',
-  message: 'Enter a valid {0}',
+  invalid: 'Invalid input',
+  message: 'Enter a valid input',
 };
