@@ -39,6 +39,8 @@ export class Base {
         return Utils.formatPostalCode(input);
       case 'city':
         return Utils.formatCity(input);
+      case 'date':
+        return Utils.formatDate(input);
       default:
         return input;
     }

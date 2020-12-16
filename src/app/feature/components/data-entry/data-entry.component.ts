@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { defaultCalendarMinDate } from 'src/app/shared/utils/constants';
 import { DummyApiService } from '../../services/dummy-api/dummy-api.service';
 import { DataValidators } from '../../validators/data-validators';
 import { Base } from '../base/base';
@@ -14,8 +16,10 @@ export class DataEntryComponent extends Base implements OnInit {
   }
 
   form: FormGroup;
+  defaultMinDate: NgbDateStruct;
 
   ngOnInit(): void {
+    this.defaultMinDate = defaultCalendarMinDate;
     this.form = this.createForm();
   }
 

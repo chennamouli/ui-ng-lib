@@ -24,6 +24,17 @@
         "invalid": "Remove the invalid characters: {0}"
       }
     },
+    "gender": {
+      "label": "Gender",
+      "errors": {}
+    },
+    "dateOfBirth": {
+      "label": "Birth Date",
+      "placeholder": "MM/DD/YYYY",
+      "errors": {
+        "invalid": "Enter a valid date in MM/DD/YYYY format"
+      }
+    },
     "ssn": {
       "label": "SSN",
       "placeholder": "###-##-####",

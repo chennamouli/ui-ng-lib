@@ -38,7 +38,14 @@
   <div class="form-group col-md-6">
     <label for="dateOfBirth" class="form-label"
       [ngClass]="{'text-danger': isControlValid(form.get('dateOfBirth'))}">{{'fields.dateOfBirth.label'|translate}}</label>
-    <input type="text" formControlName="dateOfBirth" class="form-control" id="lastName" maxlength="10">
+    <div class="input-group">
+      <input class="form-control" formControlName="dateOfBirth" maxlength="10"
+        (input)="onInput('date', $event)" [minDate]="defaultMinDate" ngbDatepicker #d="ngbDatepicker"
+        [attr.placeholder]="'fields.dateOfBirth.placeholder'|translate">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+      </div>
+    </div>
     <app-control-error [control]="form.get('dateOfBirth')"
       [fieldErrorsMap]="'fields.dateOfBirth.errors'|translate">
     </app-control-error>
