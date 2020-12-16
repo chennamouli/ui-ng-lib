@@ -1,10 +1,4 @@
-<div aria-relevant="[additions,text]">
-  <div class="field-error-icon field-error text-danger"
-    *ngIf="message&&control.touched && control.invalid">
-    {{message}}
-  </div>
-  <div class="field-error-icon field-error text-danger"
-    *ngIf="control&&control.touched && control.invalid">
-    {{errorMessage}}
-  </div>
+<div *ngIf="control && control.invalid && (control.touched || control.dirty)"
+  aria-relevant="[additions,text]" class="field-error-icon field-error text-danger">
+  {{errorMessage}}
 </div>

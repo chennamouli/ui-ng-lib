@@ -12,9 +12,6 @@ export class ControlErrorComponent implements OnInit {
   constructor() {}
 
   @Input()
-  message: string;
-
-  @Input()
   control: FormControl;
 
   @Input()

@@ -36,6 +36,8 @@ export class DataEntryComponent extends Base implements OnInit {
         Validators.required,
         DataValidators.lastName,
       ]),
+      gender: this.formControl([Validators.required]),
+      dateOfBirth: this.formControl([Validators.required]),
       ssn: this.formControl([Validators.required, DataValidators.ssn]),
       email: this.formControl([Validators.required, Validators.email]),
       addressLine1: this.formControl([Validators.required]),

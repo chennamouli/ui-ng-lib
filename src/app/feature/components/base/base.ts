@@ -13,7 +13,7 @@ export class Base {
   }
 
   isControlValid(control: AbstractControl): boolean {
-    return control && control.touched && control.invalid;
+    return control && control.invalid && (control.touched || control.dirty);
   }
 
   onInput(formatType: string, event: any): void {

@@ -18,6 +18,33 @@
   </div>
 
   <div class="form-group col-md-6">
+    <label for="gender" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('gender'))}">{{'fields.gender.label'|translate}}</label>
+    <div class="form-row">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" formControlName="gender" value="M" id="gender1" class="custom-control-input">
+        <label class="custom-control-label" for="gender1">Male</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" formControlName="gender" value="F" id="gender2" class="custom-control-input">
+        <label class="custom-control-label" for="gender2">Female</label>
+      </div>
+    </div>
+    <app-control-error [control]="form.get('gender')"
+      [fieldErrorsMap]="'fields.gender.errors'|translate">
+    </app-control-error>
+  </div>
+
+  <div class="form-group col-md-6">
+    <label for="dateOfBirth" class="form-label"
+      [ngClass]="{'text-danger': isControlValid(form.get('dateOfBirth'))}">{{'fields.dateOfBirth.label'|translate}}</label>
+    <input type="text" formControlName="dateOfBirth" class="form-control" id="lastName" maxlength="10">
+    <app-control-error [control]="form.get('dateOfBirth')"
+      [fieldErrorsMap]="'fields.dateOfBirth.errors'|translate">
+    </app-control-error>
+  </div>
+
+  <div class="form-group col-md-6">
     <label for="ssn" class="form-label"
       [ngClass]="{'text-danger': isControlValid(form.get('ssn'))}">{{'fields.ssn.label'|translate}}</label>
     <input type="text" formControlName="ssn" class="form-control" id="ssn" maxlength="11"

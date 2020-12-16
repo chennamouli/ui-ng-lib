@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Demo: [https://chennamouli.github.io/ui-ng-lib/#/home](https://chennamouli.github.io/ui-ng-lib/#/home)
 
+Demo (local): [http://localhost:4200/#/home](http://localhost:4200/#/home)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
