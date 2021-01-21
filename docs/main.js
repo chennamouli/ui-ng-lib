@@ -845,18 +845,51 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Pick4Component", function() { return Pick4Component; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
 
 
 class Pick4Component {
-    constructor() { }
+    constructor(http) {
+        this.http = http;
+        this.data = [];
+        this.response = {};
+    }
     ngOnInit() {
+        this.response.name = 'Pick 4';
+        // this.data = [
+        //   { name: 'Pick 4', 'event': 'M', number: 1234, date: '2021-01-01' },
+        //   { name: 'Pick 4', 'event': 'M', number: 4567, date: '2021-01-01' },
+        //   { name: 'Pick 4', 'event': 'M', number: 9801, date: '2021-01-01' },
+        //   { name: 'Pick 4', 'event': 'M', number: 2589, date: '2021-01-01' }
+        // ];
+        this.http.get('assets/p4.json').subscribe((data) => {
+            data.forEach(item => {
+                this.data.push({ name: 'Pick 4', 'event': 'M', number: '' + item.d1 + item.d2 + item.d3 + item.d4, ball: item.ball, date: new Date(item.year, item.month - 1, item.day) });
+            });
+            const totalEvents = this.response.total = this.data.length;
+            this.data.forEach(item => {
+                for (let i = 0; i < 10; i++) {
+                    if (item.number.toString().indexOf('' + i) >= 0)
+                        this.response['digit' + i + '_count'] = (this.response['digit' + i + '_count'] || 0) + 1;
+                }
+            });
+            for (let i = 0; i < 10; i++) {
+                this.response['digit' + i + '_probablity'] = this.response['digit' + i + '_count'] ? parseFloat('' + this.response['digit' + i + '_count'] * 100 / totalEvents).toFixed(2) + '%' : '0%';
+            }
+        });
+    }
+    get prettyResponse() {
+        return JSON.stringify(this.response, null, 2)
+            .replace(/ /g, '&nbsp;')
+            .replace(/\n/g, '<br/>');
     }
 }
-Pick4Component.ɵfac = function Pick4Component_Factory(t) { return new (t || Pick4Component)(); };
-Pick4Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Pick4Component, selectors: [["app-pick4"]], decls: 2, vars: 0, template: function Pick4Component_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "pick4 works!");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+Pick4Component.ɵfac = function Pick4Component_Factory(t) { return new (t || Pick4Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+Pick4Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Pick4Component, selectors: [["app-pick4"]], decls: 1, vars: 1, consts: [[3, "innerHTML"]], template: function Pick4Component_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "pre", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx.prettyResponse, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
     } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlYXR1cmUvY29tcG9uZW50cy9waWNrNC9waWNrNC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Pick4Component, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -865,7 +898,7 @@ Pick4Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
                 templateUrl: './pick4.component.html',
                 styleUrls: ['./pick4.component.scss']
             }]
-    }], function () { return []; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
