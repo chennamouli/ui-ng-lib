@@ -39,7 +39,7 @@
     <label for="dateOfBirth" class="form-label"
       [ngClass]="{'text-danger': isControlValid(form.get('dateOfBirth'))}">{{'fields.dateOfBirth.label'|translate}}</label>
     <div class="input-group">
-      <input class="form-control" formControlName="dateOfBirth" maxlength="10"
+      <input class="form-control" formControlName="dateOfBirth" maxlength="10" id="dateOfBirth"
         (input)="onInput('date', $event)" [minDate]="defaultMinDate" ngbDatepicker #d="ngbDatepicker"
         [attr.placeholder]="'fields.dateOfBirth.placeholder'|translate">
       <div class="input-group-append">
