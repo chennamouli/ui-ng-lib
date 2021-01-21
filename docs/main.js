@@ -37,6 +37,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./feature/components/data-entry/data-entry.component */ "./src/app/feature/components/data-entry/data-entry.component.ts");
 /* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
+/* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
+
 
 
 
@@ -53,6 +55,11 @@ const routes = [
         path: 'data-entry',
         component: _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_2__["DataEntryComponent"],
         data: { title: 'Data-Entry' },
+    },
+    {
+        path: 'pick4',
+        component: _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_4__["Pick4Component"],
+        data: { title: 'Pick-4' },
     },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
@@ -110,6 +117,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const _c0 = function () { return ["/data-entry"]; };
+const _c1 = function () { return ["/pick4"]; };
 class AppComponent {
     constructor(translate) {
         this.translate = translate;
@@ -119,7 +127,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngx_translate_core__WEBPACK_IMPORTED_MODULE_1__["TranslateService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 28, vars: 2, consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "fixed-top", "bg-dark"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarCollapse", "aria-controls", "navbarCollapse", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarCollapse", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item"], ["routerLink", "/home", "routerLinkActive", "active", 1, "nav-link"], [1, "sr-only"], ["routerLinkActive", "active", 1, "nav-link", 3, "routerLink"], [1, "navbar-header", "navbar-right"], ["href", "https://github.com/chennamouli/ui-ng-lib", 1, "nav-link", "text-white"], ["href", "https://chennamouli.github.io/ui-ng-lib/#/home", 1, "nav-link", "text-white"], ["role", "main", 1, "container"], [1, "footer"], [1, "container"], [1, "text-muted"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 34, vars: 4, consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "fixed-top", "bg-dark"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarCollapse", "aria-controls", "navbarCollapse", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarCollapse", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item"], ["routerLink", "/home", "routerLinkActive", "active", 1, "nav-link"], [1, "sr-only"], ["routerLinkActive", "active", 1, "nav-link", 3, "routerLink"], [1, "navbar-header", "navbar-right"], ["href", "http://localhost:4200/#/home", 1, "nav-link", "text-white"], ["href", "https://chennamouli.github.io/ui-ng-lib/#/home", 1, "nav-link", "text-white"], ["href", "https://github.com/chennamouli/ui-ng-lib", 1, "nav-link", "text-white"], ["role", "main", 1, "container"], [1, "footer"], [1, "container"], [1, "text-muted"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 1);
@@ -143,33 +151,45 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Data-Entry");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "li", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Pick-4");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "GitHub Code");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "GitHub App");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Local App");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "GitHub App");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "GitHub Code");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "main", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "main", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "footer", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "span", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "@Copyright: 2020 ui-ng-lib");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "footer", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "span", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "@Copyright: 2020 ui-ng-lib");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](1, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](2, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c1));
     } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavbar"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -207,6 +227,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_http_interceptors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./core/http-interceptors */ "./src/app/core/http-interceptors/index.ts");
 /* harmony import */ var _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./feature/components/data-entry/data-entry.component */ "./src/app/feature/components/data-entry/data-entry.component.ts");
 /* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
+/* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
+
 
 
 
@@ -245,7 +267,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             }),
             src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_7__["SharedModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
@@ -254,7 +276,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-                declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"]],
+                declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"]],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
@@ -512,7 +534,7 @@ class DataEntryComponent extends _base_base__WEBPACK_IMPORTED_MODULE_4__["Base"]
     }
 }
 DataEntryComponent.ɵfac = function DataEntryComponent_Factory(t) { return new (t || DataEntryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_dummy_api_dummy_api_service__WEBPACK_IMPORTED_MODULE_5__["DummyApiService"])); };
-DataEntryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DataEntryComponent, selectors: [["app-data-entry"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 113, vars: 142, consts: [[1, "row", "g-3", 3, "formGroup", "ngSubmit"], [1, "form-group", "col-md-6"], ["for", "firstName", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "firstName", "id", "firstName", "maxlength", "30", 1, "form-control"], [3, "control", "fieldErrorsMap"], ["for", "lastName", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "lastName", "id", "lastName", "maxlength", "30", 1, "form-control"], ["for", "gender", 1, "form-label", 3, "ngClass"], [1, "form-row"], [1, "custom-control", "custom-radio", "custom-control-inline"], ["type", "radio", "formControlName", "gender", "value", "M", "id", "gender1", 1, "custom-control-input"], ["for", "gender1", 1, "custom-control-label"], ["type", "radio", "formControlName", "gender", "value", "F", "id", "gender2", 1, "custom-control-input"], ["for", "gender2", 1, "custom-control-label"], ["for", "dateOfBirth", 1, "form-label", 3, "ngClass"], [1, "input-group"], ["formControlName", "dateOfBirth", "maxlength", "10", "ngbDatepicker", "", 1, "form-control", 3, "minDate", "input"], ["d", "ngbDatepicker"], [1, "input-group-append"], ["type", "button", 1, "btn", "btn-outline-secondary", "calendar", 3, "click"], ["for", "ssn", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "ssn", "id", "ssn", "maxlength", "11", 1, "form-control", 3, "input"], ["for", "personal-email", 1, "form-label", 3, "ngClass"], ["type", "email", "formControlName", "email", "id", "personal-email", "maxlength", "128", 1, "form-control"], [1, "form-group", "col-12"], ["for", "addressLine1", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "addressLine1", "id", "addressLine1", 1, "form-control"], ["for", "addressLine2", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "addressLine2", "id", "addressLine1", 1, "form-control"], ["for", "city", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "city", "id", "city", 1, "form-control"], [1, "form-group", "col-md-4"], ["for", "state", 1, "form-label", 3, "ngClass"], ["id", "state", "formControlName", "state", 1, "form-control"], ["value", "null", "selected", ""], ["value", "TX"], [1, "form-group", "col-sm-12", "col-md-4", "col-lg-3"], ["for", "zip", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "zip", "id", "zip", "maxlength", "5", 1, "form-control", 3, "input"], [1, "col-12"], ["type", "submit", "appDisableIfReqInProgress", "", 1, "btn", "btn-primary"], [1, "py-4"]], template: function DataEntryComponent_Template(rf, ctx) { if (rf & 1) {
+DataEntryComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DataEntryComponent, selectors: [["app-data-entry"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵInheritDefinitionFeature"]], decls: 113, vars: 142, consts: [[1, "row", "g-3", 3, "formGroup", "ngSubmit"], [1, "form-group", "col-md-6"], ["for", "firstName", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "firstName", "id", "firstName", "maxlength", "30", 1, "form-control"], [3, "control", "fieldErrorsMap"], ["for", "lastName", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "lastName", "id", "lastName", "maxlength", "30", 1, "form-control"], ["for", "gender", 1, "form-label", 3, "ngClass"], [1, "form-row"], [1, "custom-control", "custom-radio", "custom-control-inline"], ["type", "radio", "formControlName", "gender", "value", "M", "id", "gender1", 1, "custom-control-input"], ["for", "gender1", 1, "custom-control-label"], ["type", "radio", "formControlName", "gender", "value", "F", "id", "gender2", 1, "custom-control-input"], ["for", "gender2", 1, "custom-control-label"], ["for", "dateOfBirth", 1, "form-label", 3, "ngClass"], [1, "input-group"], ["formControlName", "dateOfBirth", "maxlength", "10", "id", "dateOfBirth", "ngbDatepicker", "", 1, "form-control", 3, "minDate", "input"], ["d", "ngbDatepicker"], [1, "input-group-append"], ["type", "button", 1, "btn", "btn-outline-secondary", "calendar", 3, "click"], ["for", "ssn", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "ssn", "id", "ssn", "maxlength", "11", 1, "form-control", 3, "input"], ["for", "personal-email", 1, "form-label", 3, "ngClass"], ["type", "email", "formControlName", "email", "id", "personal-email", "maxlength", "128", 1, "form-control"], [1, "form-group", "col-12"], ["for", "addressLine1", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "addressLine1", "id", "addressLine1", 1, "form-control"], ["for", "addressLine2", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "addressLine2", "id", "addressLine1", 1, "form-control"], ["for", "city", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "city", "id", "city", 1, "form-control"], [1, "form-group", "col-md-4"], ["for", "state", 1, "form-label", 3, "ngClass"], ["id", "state", "formControlName", "state", 1, "form-control"], ["value", "null", "selected", ""], ["value", "TX"], [1, "form-group", "col-sm-12", "col-md-4", "col-lg-3"], ["for", "zip", 1, "form-label", 3, "ngClass"], ["type", "text", "formControlName", "zip", "id", "zip", "maxlength", "5", 1, "form-control", 3, "input"], [1, "col-12"], ["type", "submit", "appDisableIfReqInProgress", "", 1, "btn", "btn-primary"], [1, "py-4"]], template: function DataEntryComponent_Template(rf, ctx) { if (rf & 1) {
         const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function DataEntryComponent_Template_form_ngSubmit_0_listener() { return ctx.onSubmit(); });
@@ -806,6 +828,42 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
                 selector: 'app-home',
                 templateUrl: './home.component.html',
                 styleUrls: ['./home.component.scss']
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/feature/components/pick4/pick4.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/feature/components/pick4/pick4.component.ts ***!
+  \*************************************************************/
+/*! exports provided: Pick4Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Pick4Component", function() { return Pick4Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+class Pick4Component {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+Pick4Component.ɵfac = function Pick4Component_Factory(t) { return new (t || Pick4Component)(); };
+Pick4Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Pick4Component, selectors: [["app-pick4"]], decls: 2, vars: 0, template: function Pick4Component_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "pick4 works!");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlYXR1cmUvY29tcG9uZW50cy9waWNrNC9waWNrNC5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Pick4Component, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-pick4',
+                templateUrl: './pick4.component.html',
+                styleUrls: ['./pick4.component.scss']
             }]
     }], function () { return []; }, null); })();
 
