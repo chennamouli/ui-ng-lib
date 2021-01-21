@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { httpInterceptorProviders } from './core/http-interceptors';
 import { DataEntryComponent } from './feature/components/data-entry/data-entry.component';
 import { HomeComponent } from './feature/components/home/home.component';
+import { Pick4Component } from './feature/components/pick4/pick4.component';
 
 export function createTranslateLoader(http: HttpClient) {
   // cache-buster, cb=time query paramer prevents from caching this file at the client side.
@@ -22,7 +23,7 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, DataEntryComponent, HomeComponent],
+  declarations: [AppComponent, DataEntryComponent, HomeComponent, Pick4Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
