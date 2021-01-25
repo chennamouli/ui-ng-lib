@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AllOrNothingComponent } from './feature/components/all-or-nothing/all-or-nothing.component';
 import { DataEntryComponent } from './feature/components/data-entry/data-entry.component';
 import { HomeComponent } from './feature/components/home/home.component';
 import { Pick4Component } from './feature/components/pick4/pick4.component';
@@ -19,6 +20,11 @@ const routes: Routes = [
     path: 'pick4',
     component: Pick4Component,
     data: { title: 'Pick-4' },
+  },
+  {
+    path: 'all-or-nothing',
+    component: AllOrNothingComponent,
+    data: { title: 'All or Nothing' },
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {

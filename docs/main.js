@@ -35,9 +35,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./feature/components/data-entry/data-entry.component */ "./src/app/feature/components/data-entry/data-entry.component.ts");
-/* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
-/* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
+/* harmony import */ var _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./feature/components/all-or-nothing/all-or-nothing.component */ "./src/app/feature/components/all-or-nothing/all-or-nothing.component.ts");
+/* harmony import */ var _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feature/components/data-entry/data-entry.component */ "./src/app/feature/components/data-entry/data-entry.component.ts");
+/* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
+/* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
+
 
 
 
@@ -48,18 +50,23 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: 'home',
-        component: _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
+        component: _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"],
         data: { title: 'Home' },
     },
     {
         path: 'data-entry',
-        component: _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_2__["DataEntryComponent"],
+        component: _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_3__["DataEntryComponent"],
         data: { title: 'Data-Entry' },
     },
     {
         path: 'pick4',
-        component: _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_4__["Pick4Component"],
+        component: _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_5__["Pick4Component"],
         data: { title: 'Pick-4' },
+    },
+    {
+        path: 'all-or-nothing',
+        component: _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_2__["AllOrNothingComponent"],
+        data: { title: 'All or Nothing' },
     },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
@@ -118,6 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = function () { return ["/data-entry"]; };
 const _c1 = function () { return ["/pick4"]; };
+const _c2 = function () { return ["/all-or-nothing"]; };
 class AppComponent {
     constructor(translate) {
         this.translate = translate;
@@ -127,7 +135,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngx_translate_core__WEBPACK_IMPORTED_MODULE_1__["TranslateService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 34, vars: 4, consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "fixed-top", "bg-dark"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarCollapse", "aria-controls", "navbarCollapse", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarCollapse", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item"], ["routerLink", "/home", "routerLinkActive", "active", 1, "nav-link"], [1, "sr-only"], ["routerLinkActive", "active", 1, "nav-link", 3, "routerLink"], [1, "navbar-header", "navbar-right"], ["href", "http://localhost:4200/#/home", 1, "nav-link", "text-white"], ["href", "https://chennamouli.github.io/ui-ng-lib/#/home", 1, "nav-link", "text-white"], ["href", "https://github.com/chennamouli/ui-ng-lib", 1, "nav-link", "text-white"], ["role", "main", 1, "container"], [1, "footer"], [1, "container"], [1, "text-muted"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 37, vars: 6, consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "fixed-top", "bg-dark"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarCollapse", "aria-controls", "navbarCollapse", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarCollapse", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item"], ["routerLink", "/home", "routerLinkActive", "active", 1, "nav-link"], [1, "sr-only"], ["routerLinkActive", "active", 1, "nav-link", 3, "routerLink"], [1, "navbar-header", "navbar-right"], ["href", "http://localhost:4200/#/home", 1, "nav-link", "text-white"], ["href", "https://chennamouli.github.io/ui-ng-lib/#/home", 1, "nav-link", "text-white"], ["href", "https://github.com/chennamouli/ui-ng-lib", 1, "nav-link", "text-white"], ["role", "main", 1, "container"], [1, "footer"], [1, "container"], [1, "text-muted"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 1);
@@ -156,40 +164,47 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Pick-4");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "All or Nothing");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Local App");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "GitHub App");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Local App");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "GitHub Code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "GitHub App");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "GitHub Code");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "main", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "main", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "footer", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "span", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "@Copyright: 2020 ui-ng-lib");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "footer", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "span", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "@Copyright: 2020 ui-ng-lib");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](2, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c0));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c2));
     } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavbar"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -228,6 +243,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./feature/components/data-entry/data-entry.component */ "./src/app/feature/components/data-entry/data-entry.component.ts");
 /* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
 /* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
+/* harmony import */ var _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./feature/components/all-or-nothing/all-or-nothing.component */ "./src/app/feature/components/all-or-nothing/all-or-nothing.component.ts");
+
 
 
 
@@ -267,7 +284,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             }),
             src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_7__["SharedModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"], _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__["AllOrNothingComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
@@ -276,7 +293,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-                declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"]],
+                declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"], _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__["AllOrNothingComponent"]],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
@@ -397,6 +414,106 @@ const httpInterceptorProviders = [
     { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HTTP_INTERCEPTORS"], useClass: _auth_interceptor__WEBPACK_IMPORTED_MODULE_2__["AuthInterceptor"], multi: true },
     { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HTTP_INTERCEPTORS"], useClass: src_app_shared_http_interceptors_spinner_interceptor__WEBPACK_IMPORTED_MODULE_1__["SpinnerInterceptor"], multi: true },
 ];
+
+
+/***/ }),
+
+/***/ "./src/app/feature/components/all-or-nothing/all-or-nothing.component.ts":
+/*!*******************************************************************************!*\
+  !*** ./src/app/feature/components/all-or-nothing/all-or-nothing.component.ts ***!
+  \*******************************************************************************/
+/*! exports provided: AllOrNothingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllOrNothingComponent", function() { return AllOrNothingComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+class AllOrNothingComponent {
+    constructor(http) {
+        this.http = http;
+        this.data = [];
+        this.response = {};
+    }
+    ngOnInit() {
+        this.response.name = 'All Or Nothing';
+        this.data = [
+            { name: 'All or Nothing', game: 'M', number: [4, 8, 9, 10, 11, 12, 14, 17, 19, 20, 22, 23], date: '2021-01-23' },
+            { name: 'All or Nothing', game: 'M', number: [1, 4, 6, 10, 12, 14, 15, 16, 17, 19, 20, 21], date: '2021-01-22' },
+            { name: 'All or Nothing', game: 'M', number: [4, 5, 9, 10, 13, 14, 17, 18, 20, 21, 22, 24], date: '2021-01-21' },
+            { name: 'All or Nothing', game: 'M', number: [1, 2, 3, 4, 9, 12, 13, 16, 17, 20, 22, 24], date: '2021-01-20' },
+            { name: 'All or Nothing', game: 'M', number: [2, 4, 5, 9, 10, 11, 15, 20, 21, 22, 23, 24], date: '2021-01-19' }
+        ];
+        const totalEvents = this.response.total = this.data.length;
+        // total count of digits
+        const tempCount = {};
+        this.data.forEach(item => {
+            for (let i = 1; i <= 24; i++) {
+                if (item.number.indexOf(i) >= 0)
+                    tempCount['digit' + i + '_count'] = (tempCount['digit' + i + '_count'] || 0) + 1;
+            }
+        });
+        // probability of digits
+        this.response.probability = [];
+        for (let i = 1; i <= Object.keys(tempCount).length; i++) {
+            const o = {};
+            o['key'] = 'digit_' + i;
+            o['value'] = tempCount['digit' + i + '_count'] ? parseFloat('' + tempCount['digit' + i + '_count'] * 100 / totalEvents).toFixed(2) + '%' : '0%';
+            o['count'] = tempCount['digit' + i + '_count'];
+            this.response.probability.push(o);
+        }
+        this.response.probability.sort((a, b) => a.count < b.count ? 1 : -1);
+        // digit combination occurrance
+        const startTime = new Date().getMilliseconds();
+        const allNumbers = this.data.map(item => item.number);
+        this.response['digit_combination_occurrance'] = [];
+        for (let i = 1; i <= 24; i++) {
+            for (let j = i + 1; j <= 24; j++) {
+                for (let k = j + 1; k <= 24; k++) {
+                    for (let l = k + 1; l <= 24; l++) {
+                        for (let m = l + 1; m <= 24; m++) {
+                            for (let n = m + 1; n <= 24; n++) {
+                                const o = {};
+                                o['key'] = i + "_" + j + "_" + k + "_" + l + "_" + m + "_" + n;
+                                // o['key'] = i + "_" + j + "_" + k + "_" + l + "_" + m + "_" + n;
+                                o['value'] = allNumbers.filter(item => item.indexOf(i) >= 0 && item.indexOf(j) >= 0 &&
+                                    item.indexOf(k) >= 0 && item.indexOf(l) >= 0 &&
+                                    item.indexOf(m) >= 0 && item.indexOf(n) >= 0).length;
+                                this.response['digit_combination_occurrance'].push(o);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        this.response['digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1).slice(0, 10);
+        this.response['digit_combination_occurrance'] = [...this.response['digit_combination_occurrance'].slice(0, 10), ...this.response['digit_combination_occurrance'].slice(this.response['digit_combination_occurrance'].length - 10, this.response['digit_combination_occurrance'].length)];
+        this.response['digit_combination_occurrance_elapsedTime'] = (new Date().getMilliseconds() - startTime) / 1000 + 'sec';
+    }
+    get prettyResponse() {
+        return JSON.stringify(this.response, null, 2)
+            .replace(/ /g, '&nbsp;')
+            .replace(/\n/g, '<br/>');
+    }
+}
+AllOrNothingComponent.ɵfac = function AllOrNothingComponent_Factory(t) { return new (t || AllOrNothingComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+AllOrNothingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AllOrNothingComponent, selectors: [["app-all-or-nothing"]], decls: 1, vars: 1, consts: [[3, "innerHTML"]], template: function AllOrNothingComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "pre", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx.prettyResponse, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlYXR1cmUvY29tcG9uZW50cy9hbGwtb3Itbm90aGluZy9hbGwtb3Itbm90aGluZy5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AllOrNothingComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-all-or-nothing',
+                templateUrl: './all-or-nothing.component.html',
+                styleUrls: ['./all-or-nothing.component.scss']
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
@@ -857,26 +974,99 @@ class Pick4Component {
     }
     ngOnInit() {
         this.response.name = 'Pick 4';
-        // this.data = [
-        //   { name: 'Pick 4', 'event': 'M', number: 1234, date: '2021-01-01' },
-        //   { name: 'Pick 4', 'event': 'M', number: 4567, date: '2021-01-01' },
-        //   { name: 'Pick 4', 'event': 'M', number: 9801, date: '2021-01-01' },
-        //   { name: 'Pick 4', 'event': 'M', number: 2589, date: '2021-01-01' }
-        // ];
-        this.http.get('assets/p4.json').subscribe((data) => {
-            data.forEach(item => {
+        // get results and convert to nice json array
+        this.http.get('assets/p4.json').subscribe((results) => {
+            results.forEach(item => {
                 this.data.push({ name: 'Pick 4', 'event': 'M', number: '' + item.d1 + item.d2 + item.d3 + item.d4, ball: item.ball, date: new Date(item.year, item.month - 1, item.day) });
             });
             const totalEvents = this.response.total = this.data.length;
+            // total count of digits
             this.data.forEach(item => {
                 for (let i = 0; i < 10; i++) {
                     if (item.number.toString().indexOf('' + i) >= 0)
                         this.response['digit' + i + '_count'] = (this.response['digit' + i + '_count'] || 0) + 1;
                 }
             });
+            // probability of digits
             for (let i = 0; i < 10; i++) {
                 this.response['digit' + i + '_probablity'] = this.response['digit' + i + '_count'] ? parseFloat('' + this.response['digit' + i + '_count'] * 100 / totalEvents).toFixed(2) + '%' : '0%';
             }
+            // duplicate numbers between 0000 to 9999
+            const wonNumbersMap = {};
+            this.data.filter(item => !wonNumbersMap[item.number]).forEach(item => {
+                wonNumbersMap[item.number] = (wonNumbersMap[item.number] * 1 || 0) + 1;
+            });
+            const duplicateNumbersMap = {};
+            Object.keys(wonNumbersMap).forEach(number => {
+                if (wonNumbersMap[number] > 1)
+                    duplicateNumbersMap[number] = wonNumbersMap[number];
+            });
+            this.response['duplicateNumbersTotal'] = Object.keys(duplicateNumbersMap).length;
+            // this.response['duplicateNumbers'] = duplicateNumbersMap;
+            // won numbers numbers between 0000 to 9999
+            // const wonNumbers = [];
+            // this.data.filter(item => wonNumbers.indexOf(item.number) < 0).forEach(item => {
+            //   wonNumbers.push(item.number);
+            // });
+            // this.response['wonNumbersTotal'] = wonNumbers.length;
+            // this.response['wonNumbers'] = wonNumbers;
+            // number range between 0000 to 9999
+            const sortedNumbers = this.data.map(item => item.number).sort();
+            this.response['0_2500_total'] = sortedNumbers.filter(item => item < 2500).length;
+            this.response['2500_5000_total'] = sortedNumbers.filter(item => item >= 2500 && item < 5000).length;
+            this.response['5000_7500_total'] = sortedNumbers.filter(item => item >= 5000 && item < 7500).length;
+            this.response['7500_10000_total'] = sortedNumbers.filter(item => item >= 7500 && item < 10000).length;
+            this.response['6000_7000_total'] = sortedNumbers.filter(item => item >= 6000 && item < 7000).length;
+            this.response['digit6_occurrance0'] = sortedNumbers.filter(item => item.toString().indexOf('6') === 0).length;
+            this.response['digit6_occurrance1'] = sortedNumbers.filter(item => item.toString().indexOf('6') === 1).length;
+            this.response['digit6_occurrance2'] = sortedNumbers.filter(item => item.toString().indexOf('6') === 2).length;
+            this.response['digit6_occurrance3'] = sortedNumbers.filter(item => item.toString().indexOf('6') === 3).length;
+            this.response['digit8_occurrance0'] = sortedNumbers.filter(item => item.toString().indexOf('8') === 0).length;
+            this.response['digit8_occurrance1'] = sortedNumbers.filter(item => item.toString().indexOf('8') === 1).length;
+            this.response['digit8_occurrance2'] = sortedNumbers.filter(item => item.toString().indexOf('8') === 2).length;
+            this.response['digit8_occurrance3'] = sortedNumbers.filter(item => item.toString().indexOf('8') === 3).length;
+            this.response['digit_combination_occurrance'] =
+                sortedNumbers.filter(item => item.toString().indexOf('1') >= 0 && item.toString().indexOf('9') >= 0).length;
+            this.response['2_digit_combination_occurrance'] = [];
+            for (let i = 0; i < 10; i++) {
+                for (let j = i + 1; j < 10; j++) {
+                    const o = {};
+                    o['key'] = i + "_" + j;
+                    o['value'] = this.response['digit_combination_occurrance_' + i + "_" + j] =
+                        sortedNumbers.filter(item => item.toString().indexOf(i) >= 0 && item.toString().indexOf(j) >= 0).length;
+                    this.response['2_digit_combination_occurrance'].push(o);
+                }
+            }
+            this.response['2_digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1);
+            this.response['3_digit_combination_occurrance'] = [];
+            for (let i = 0; i < 10; i++) {
+                for (let j = i + 1; j < 10; j++) {
+                    for (let k = j + 1; k < 10; k++) {
+                        const o = {};
+                        o['key'] = i + "_" + j + "_" + k;
+                        o['value'] = sortedNumbers.filter(item => item.toString().indexOf(i) >= 0 && item.toString().indexOf(j) >= 0 && item.toString().indexOf(k) >= 0).length;
+                        this.response['3_digit_combination_occurrance'].push(o);
+                    }
+                }
+            }
+            this.response['3_digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1);
+            this.response['4_digit_combination_occurrance'] = [];
+            for (let i = 0; i < 10; i++) {
+                for (let j = i + 1; j < 10; j++) {
+                    for (let k = j + 1; k < 10; k++) {
+                        for (let l = k + 1; l < 10; l++) {
+                            const o = {};
+                            o['key'] = i + "_" + j + "_" + k + "_" + l;
+                            o['value'] = sortedNumbers.filter(item => item.toString().indexOf(i) >= 0 && item.toString().indexOf(j) >= 0 && item.toString().indexOf(k) >= 0 && item.toString().indexOf(l) >= 0).length;
+                            this.response['4_digit_combination_occurrance'].push(o);
+                        }
+                    }
+                }
+            }
+            this.response['4_digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1);
+            // last occurance of the combination
+            this.response['given_digit_combination_occurrance'] = [];
+            this.response['given_digit_combination_occurrance'] = this.data.filter(item => item.number.indexOf('0') >= 0 && item.number.indexOf('6') >= 0 && item.number.indexOf('7') >= 0);
         });
     }
     get prettyResponse() {
