@@ -36,9 +36,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./feature/components/all-or-nothing/all-or-nothing.component */ "./src/app/feature/components/all-or-nothing/all-or-nothing.component.ts");
-/* harmony import */ var _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feature/components/data-entry/data-entry.component */ "./src/app/feature/components/data-entry/data-entry.component.ts");
-/* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
-/* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
+/* harmony import */ var _feature_components_cash5_cash5_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feature/components/cash5/cash5.component */ "./src/app/feature/components/cash5/cash5.component.ts");
+/* harmony import */ var _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./feature/components/data-entry/data-entry.component */ "./src/app/feature/components/data-entry/data-entry.component.ts");
+/* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
+/* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
+
 
 
 
@@ -50,18 +52,23 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: 'home',
-        component: _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"],
+        component: _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
         data: { title: 'Home' },
     },
     {
         path: 'data-entry',
-        component: _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_3__["DataEntryComponent"],
+        component: _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_4__["DataEntryComponent"],
         data: { title: 'Data-Entry' },
     },
     {
         path: 'pick4',
-        component: _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_5__["Pick4Component"],
+        component: _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_6__["Pick4Component"],
         data: { title: 'Pick-4' },
+    },
+    {
+        path: 'cash5',
+        component: _feature_components_cash5_cash5_component__WEBPACK_IMPORTED_MODULE_3__["Cash5Component"],
+        data: { title: 'Cash-5' },
     },
     {
         path: 'all-or-nothing',
@@ -125,7 +132,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = function () { return ["/data-entry"]; };
 const _c1 = function () { return ["/pick4"]; };
-const _c2 = function () { return ["/all-or-nothing"]; };
+const _c2 = function () { return ["/cash5"]; };
+const _c3 = function () { return ["/all-or-nothing"]; };
 class AppComponent {
     constructor(translate) {
         this.translate = translate;
@@ -135,7 +143,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngx_translate_core__WEBPACK_IMPORTED_MODULE_1__["TranslateService"])); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 37, vars: 6, consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "fixed-top", "bg-dark"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarCollapse", "aria-controls", "navbarCollapse", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarCollapse", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item"], ["routerLink", "/home", "routerLinkActive", "active", 1, "nav-link"], [1, "sr-only"], ["routerLinkActive", "active", 1, "nav-link", 3, "routerLink"], [1, "navbar-header", "navbar-right"], ["href", "http://localhost:4200/#/home", 1, "nav-link", "text-white"], ["href", "https://chennamouli.github.io/ui-ng-lib/#/home", 1, "nav-link", "text-white"], ["href", "https://github.com/chennamouli/ui-ng-lib", 1, "nav-link", "text-white"], ["role", "main", 1, "container"], [1, "footer"], [1, "container"], [1, "text-muted"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 40, vars: 8, consts: [[1, "navbar", "navbar-expand-md", "navbar-dark", "fixed-top", "bg-dark"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarCollapse", "aria-controls", "navbarCollapse", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarCollapse", 1, "collapse", "navbar-collapse"], [1, "navbar-nav", "mr-auto"], [1, "nav-item"], ["routerLink", "/home", "routerLinkActive", "active", 1, "nav-link"], [1, "sr-only"], ["routerLinkActive", "active", 1, "nav-link", 3, "routerLink"], [1, "navbar-header", "navbar-right"], ["href", "http://localhost:4200/#/home", 1, "nav-link", "text-white"], ["href", "https://chennamouli.github.io/ui-ng-lib/#/home", 1, "nav-link", "text-white"], ["href", "https://github.com/chennamouli/ui-ng-lib", 1, "nav-link", "text-white"], ["role", "main", 1, "container"], [1, "footer"], [1, "container"], [1, "text-muted"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 1);
@@ -166,45 +174,52 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "All or Nothing");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Cash 5");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "li", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "All or Nothing");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Local App");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "GitHub App");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Local App");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "GitHub Code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "GitHub App");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "GitHub Code");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "main", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "router-outlet");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "main", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "footer", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "span", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "@Copyright: 2020 ui-ng-lib");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "footer", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "span", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "@Copyright: 2020 ui-ng-lib");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c0));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c1));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c1));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c2));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c2));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c3));
     } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavbar"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkActive"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -244,6 +259,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./feature/components/home/home.component */ "./src/app/feature/components/home/home.component.ts");
 /* harmony import */ var _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./feature/components/pick4/pick4.component */ "./src/app/feature/components/pick4/pick4.component.ts");
 /* harmony import */ var _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./feature/components/all-or-nothing/all-or-nothing.component */ "./src/app/feature/components/all-or-nothing/all-or-nothing.component.ts");
+/* harmony import */ var _feature_components_cash5_cash5_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./feature/components/cash5/cash5.component */ "./src/app/feature/components/cash5/cash5.component.ts");
+
 
 
 
@@ -284,7 +301,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
             }),
             src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_7__["SharedModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"], _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__["AllOrNothingComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"], _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__["AllOrNothingComponent"], _feature_components_cash5_cash5_component__WEBPACK_IMPORTED_MODULE_15__["Cash5Component"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
@@ -293,7 +310,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-                declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"], _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__["AllOrNothingComponent"]],
+                declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _feature_components_data_entry_data_entry_component__WEBPACK_IMPORTED_MODULE_11__["DataEntryComponent"], _feature_components_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"], _feature_components_pick4_pick4_component__WEBPACK_IMPORTED_MODULE_13__["Pick4Component"], _feature_components_all_or_nothing_all_or_nothing_component__WEBPACK_IMPORTED_MODULE_14__["AllOrNothingComponent"], _feature_components_cash5_cash5_component__WEBPACK_IMPORTED_MODULE_15__["Cash5Component"]],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
@@ -428,8 +445,11 @@ const httpInterceptorProviders = [
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllOrNothingComponent", function() { return AllOrNothingComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
 
 
 
@@ -440,80 +460,219 @@ class AllOrNothingComponent {
         this.response = {};
     }
     ngOnInit() {
+        this.getData();
         this.response.name = 'All Or Nothing';
-        this.data = [
-            { name: 'All or Nothing', game: 'M', number: [4, 8, 9, 10, 11, 12, 14, 17, 19, 20, 22, 23], date: '2021-01-23' },
-            { name: 'All or Nothing', game: 'M', number: [1, 4, 6, 10, 12, 14, 15, 16, 17, 19, 20, 21], date: '2021-01-22' },
-            { name: 'All or Nothing', game: 'M', number: [4, 5, 9, 10, 13, 14, 17, 18, 20, 21, 22, 24], date: '2021-01-21' },
-            { name: 'All or Nothing', game: 'M', number: [1, 2, 3, 4, 9, 12, 13, 16, 17, 20, 22, 24], date: '2021-01-20' },
-            { name: 'All or Nothing', game: 'M', number: [2, 4, 5, 9, 10, 11, 15, 20, 21, 22, 23, 24], date: '2021-01-19' }
-        ];
-        const totalEvents = this.response.total = this.data.length;
-        // total count of digits
-        const tempCount = {};
-        this.data.forEach(item => {
-            for (let i = 1; i <= 24; i++) {
-                if (item.number.indexOf(i) >= 0)
-                    tempCount['digit' + i + '_count'] = (tempCount['digit' + i + '_count'] || 0) + 1;
-            }
+        this.getData().subscribe(data => {
+            this.data = data;
+            // this.data = [
+            //   { name: 'All or Nothing', game: 'M', number: [4, 8, 9, 10, 11, 12, 14, 17, 19, 20, 22, 23], date: '2021-01-23' },
+            //   { name: 'All or Nothing', game: 'M', number: [1, 4, 6, 10, 12, 14, 15, 16, 17, 19, 20, 21], date: '2021-01-22' },
+            //   { name: 'All or Nothing', game: 'M', number: [4, 5, 9, 10, 13, 14, 17, 18, 20, 21, 22, 24], date: '2021-01-21' },
+            //   { name: 'All or Nothing', game: 'M', number: [1, 2, 3, 4, 9, 12, 13, 16, 17, 20, 22, 24], date: '2021-01-20' },
+            //   { name: 'All or Nothing', game: 'M', number: [2, 4, 5, 9, 10, 11, 15, 20, 21, 22, 23, 24], date: '2021-01-19' }
+            // ];
+            const totalEvents = this.response.total = this.data.length;
+            const allNumbers = this.data.map(item => item.number);
+            // total count by digit
+            // const tempCount = {};
+            // this.data.forEach(item => {
+            //   for (let i = 1; i <= 24; i++) {
+            //     if (item.number.indexOf(i) >= 0) tempCount['digit' + i + '_count'] = (tempCount['digit' + i + '_count'] || 0) + 1;
+            //   }
+            // });
+            // probability of digit
+            // this.response.probability = [];
+            // for (let i = 1; i <= Object.keys(tempCount).length; i++) {
+            //   const o = {};
+            //   o['key'] = 'digit_' + i;
+            //   o['value'] = tempCount['digit' + i + '_count'] ? parseFloat('' + tempCount['digit' + i + '_count'] * 100 / totalEvents).toFixed(2) + '%' : '0%';
+            //   o['count'] = tempCount['digit' + i + '_count'];
+            //   //this.response.probability.push(o);
+            // }
+            // this.response.probability.sort((a, b) => a.count < b.count ? 1 : -1)
+            // 6 digit combination occurrance
+            // this.response['6_digit_combination_occurrance'] = [];
+            // for (let i = 1; i <= 24; i++) {
+            //   for (let j = i + 1; j <= 24; j++) {
+            //     for (let k = j + 1; k <= 24; k++) {
+            //       for (let l = k + 1; l <= 24; l++) {
+            //         for (let m = l + 1; m <= 24; m++) {
+            //           for (let n = m + 1; n <= 24; n++) {
+            //             const o = {};
+            //             o['key'] = i + "_" + j + "_" + k + "_" + l + "_" + m + "_" + n;
+            //             o['value'] = allNumbers.filter(item =>
+            //               item.indexOf(i) >= 0 && item.indexOf(j) >= 0 &&
+            //               item.indexOf(k) >= 0 && item.indexOf(l) >= 0 &&
+            //               item.indexOf(m) >= 0 && item.indexOf(n) >= 0).length;
+            //             this.response['6_digit_combination_occurrance'].push(o);
+            //           }
+            //         }
+            //       }
+            //     }
+            //   }
+            // }
+            // this.response['6_digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1).slice(0, 10);
+            // this.response['6_digit_combination_occurrance'] = [...this.response['6_digit_combination_occurrance'].slice(0, 10), ...this.response['6_digit_combination_occurrance'].slice(this.response['6_digit_combination_occurrance'].length - 10, this.response['6_digit_combination_occurrance'].length)];
+            // 7 digit combination occurrance
+            // this.response['7_digit_combination_occurrance'] = [];
+            // for (let i = 1; i <= 24; i++) {
+            //   for (let j = i + 1; j <= 24; j++) {
+            //     for (let k = j + 1; k <= 24; k++) {
+            //       for (let l = k + 1; l <= 24; l++) {
+            //         for (let m = l + 1; m <= 24; m++) {
+            //           for (let n = m + 1; n <= 24; n++) {
+            //             for (let o = n + 1; o <= 24; o++) {
+            //               const obj = {};
+            //               obj['key'] = i + "_" + j + "_" + k + "_" + l + "_" + m + "_" + n + "_" + o;
+            //               obj['value'] = allNumbers.filter(item =>
+            //                 item.indexOf(i) >= 0 && item.indexOf(j) >= 0 &&
+            //                 item.indexOf(k) >= 0 && item.indexOf(l) >= 0 &&
+            //                 item.indexOf(m) >= 0 && item.indexOf(n) >= 0 &&
+            //                 item.indexOf(o) >= 0).length;
+            //               this.response['7_digit_combination_occurrance'].push(obj);
+            //             }
+            //           }
+            //         }
+            //       }
+            //     }
+            //   }
+            // }
+            // this.response['7_digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1).slice(0, 10);
+            // this.response['7_digit_combination_occurrance'] = [...this.response['7_digit_combination_occurrance'].slice(0, 10), ...this.response['7_digit_combination_occurrance'].slice(this.response['7_digit_combination_occurrance'].length - 10, this.response['7_digit_combination_occurrance'].length)];
+            // const combos = allNumbers.map((item: number[]) => item.sort((a, b) => a - b).join('_'));
+            // const combosKeyMap = {};
+            // combos.forEach(item => {
+            //   combosKeyMap[item] = (combosKeyMap[item] || 0) + 1;
+            // });
+            // console.log('Duplicate: ', Object.keys(combosKeyMap).filter(key => combosKeyMap[key] > 1));
+            // 8 digit combination occurrance
+            // 4 digit combination occurrance
+            // this.response['4_digit_combination_occurrance'] = [];
+            // for (let i = 1; i <= 24; i++) {
+            //   for (let j = i + 1; j <= 24; j++) {
+            //     for (let k = j + 1; k <= 24; k++) {
+            //       for (let l = k + 1; l <= 24; l++) {
+            //         const o = {};
+            //         o['key'] = i + "_" + j + "_" + k + "_" + l;
+            //         o['value'] = allNumbers.filter(item =>
+            //           item.indexOf(i) >= 0 && item.indexOf(j) >= 0 &&
+            //           item.indexOf(k) >= 0 && item.indexOf(l) >= 0).length;
+            //         this.response['4_digit_combination_occurrance'].push(o);
+            //       }
+            //     }
+            //   }
+            // }
+            // this.response['4_digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1).slice(0, 10);
+            // this.response['4_digit_combination_occurrance'] = [...this.response['4_digit_combination_occurrance'].slice(0, 10), ...this.response['4_digit_combination_occurrance'].slice(this.response['4_digit_combination_occurrance'].length - 10, this.response['4_digit_combination_occurrance'].length)];
+            // todo
+            this.response['given_digit_combination'] = this.response['given_digit_combination_occurrance'] = null;
+            // this.digitCombo8(allNumbers);
+            this.lastOccuranceOfComobo([1, 2, 3, 4, 5, 6, 7, 11, 23, 24]);
+            // this.findMostMatchedComboNumber();
         });
-        // probability of digits
-        this.response.probability = [];
-        for (let i = 1; i <= Object.keys(tempCount).length; i++) {
-            const o = {};
-            o['key'] = 'digit_' + i;
-            o['value'] = tempCount['digit' + i + '_count'] ? parseFloat('' + tempCount['digit' + i + '_count'] * 100 / totalEvents).toFixed(2) + '%' : '0%';
-            o['count'] = tempCount['digit' + i + '_count'];
-            this.response.probability.push(o);
-        }
-        this.response.probability.sort((a, b) => a.count < b.count ? 1 : -1);
-        // digit combination occurrance
+    }
+    lastOccuranceOfComobo(givenNumber) {
+        const list = this.data.filter(item => {
+            const matched = givenNumber.filter(i => item.number.includes(i));
+            item.matchedCount = matched && matched.length;
+            item.matched = matched;
+            return item.matchedCount <= 2 || item.matchedCount >= 10;
+        });
+        this.response['given_digit_combination_occurrance'] = [...list].slice(list.length - 10, list.length);
+        this.response['given_digit_combination_occurrance_hightest'] = [...list]
+            .sort((a, b) => a.matchedCount - b.matchedCount)
+            .map(item => ({ date: item.date, matchedCount: item.matchedCount, number: item.number.join(" "), matched: item.matched.join(" ") }));
+        this.response['given_digit_combination_occurrance_hightest_length'] = this.response['given_digit_combination_occurrance_hightest'].length;
+    }
+    findMostMatchedComboNumber() {
+        const r = {};
+        const l = this.data.length;
+        let itrs = 0;
         const startTime = new Date().getMilliseconds();
-        const allNumbers = this.data.map(item => item.number);
-        this.response['digit_combination_occurrance'] = [];
+        for (let i = 0; i < l; i++) {
+            for (let j = i + 1; j < l; j++) {
+                if (this.data[i] && this.data[j]) {
+                    const key = this.data[i].number.filter(item => this.data[j].number.includes(item)).join("_");
+                    r[key] = (r[key] || 0) + 1;
+                    itrs++;
+                }
+            }
+        }
+        const top10 = Object.entries(r)
+            .filter(([key, value]) => key !== "")
+            .map(([key, value]) => ({ key: key, value: value, matchedCount: key.split("_").length }))
+            .filter(item => item.value > 2 && item.matchedCount === 8)
+            .sort((a, b) => b.value - a.value)
+            .slice(0, 200);
+        this.response['mostMatchedComboNumber_top10'] = top10;
+        this.response['mostMatchedComboNumber_iterations'] = itrs;
+        this.response['mostMatchedComboNumber_et_ms'] = new Date().getMilliseconds() - startTime;
+    }
+    digitCombo8(allNumbers) {
+        this.response['8_digit_combination_occurrance'] = [];
         for (let i = 1; i <= 24; i++) {
             for (let j = i + 1; j <= 24; j++) {
                 for (let k = j + 1; k <= 24; k++) {
                     for (let l = k + 1; l <= 24; l++) {
                         for (let m = l + 1; m <= 24; m++) {
                             for (let n = m + 1; n <= 24; n++) {
-                                const o = {};
-                                o['key'] = i + "_" + j + "_" + k + "_" + l + "_" + m + "_" + n;
-                                // o['key'] = i + "_" + j + "_" + k + "_" + l + "_" + m + "_" + n;
-                                o['value'] = allNumbers.filter(item => item.indexOf(i) >= 0 && item.indexOf(j) >= 0 &&
-                                    item.indexOf(k) >= 0 && item.indexOf(l) >= 0 &&
-                                    item.indexOf(m) >= 0 && item.indexOf(n) >= 0).length;
-                                this.response['digit_combination_occurrance'].push(o);
+                                for (let o = n + 1; o <= 24; o++) {
+                                    for (let p = o + 1; p <= 24; p++) {
+                                        const obj = {};
+                                        obj['key'] = i + "_" + j + "_" + k + "_" + l + "_" + m + "_" + n + "_" + o + "_" + p;
+                                        obj['value'] = allNumbers.filter(item => item.indexOf(i) >= 0 && item.indexOf(j) >= 0 &&
+                                            item.indexOf(k) >= 0 && item.indexOf(l) >= 0 &&
+                                            item.indexOf(m) >= 0 && item.indexOf(n) >= 0 &&
+                                            item.indexOf(o) >= 0 && item.indexOf(p) >= 0).length;
+                                        this.response['8_digit_combination_occurrance'].push(obj);
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
         }
-        this.response['digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1).slice(0, 10);
-        this.response['digit_combination_occurrance'] = [...this.response['digit_combination_occurrance'].slice(0, 10), ...this.response['digit_combination_occurrance'].slice(this.response['digit_combination_occurrance'].length - 10, this.response['digit_combination_occurrance'].length)];
-        this.response['digit_combination_occurrance_elapsedTime'] = (new Date().getMilliseconds() - startTime) / 1000 + 'sec';
+        this.response['8_digit_combination_occurrance'].sort((a, b) => a.value < b.value ? 1 : -1).slice(0, 10);
+        this.response['8_digit_combination_occurrance'] = [...this.response['8_digit_combination_occurrance'].slice(0, 10), ...this.response['8_digit_combination_occurrance'].slice(this.response['8_digit_combination_occurrance'].length - 10, this.response['8_digit_combination_occurrance'].length)];
     }
     get prettyResponse() {
         return JSON.stringify(this.response, null, 2)
             .replace(/ /g, '&nbsp;')
             .replace(/\n/g, '<br/>');
     }
+    getData() {
+        return this.http.get('assets/allornothingmorning.csv', {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({}),
+            responseType: 'text'
+        })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(fileText => {
+            let rows = fileText.split(/\r\n|\n/);
+            return rows.map(row => {
+                const values = row.split(',');
+                return {
+                    name: values[0],
+                    number: [values[4], values[5], values[6], values[7], values[8], values[9], values[10], values[11], values[12], values[13], values[14], values[15]].map(v => parseInt(v)).sort((a, b) => a - b),
+                    date: new Date(parseInt(values[3]), parseInt(values[1]) - 1, parseInt(values[2]))
+                };
+            });
+        }));
+    }
 }
-AllOrNothingComponent.ɵfac = function AllOrNothingComponent_Factory(t) { return new (t || AllOrNothingComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
-AllOrNothingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AllOrNothingComponent, selectors: [["app-all-or-nothing"]], decls: 1, vars: 1, consts: [[3, "innerHTML"]], template: function AllOrNothingComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "pre", 0);
+AllOrNothingComponent.ɵfac = function AllOrNothingComponent_Factory(t) { return new (t || AllOrNothingComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+AllOrNothingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AllOrNothingComponent, selectors: [["app-all-or-nothing"]], decls: 1, vars: 1, consts: [[3, "innerHTML"]], template: function AllOrNothingComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "pre", 0);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx.prettyResponse, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("innerHTML", ctx.prettyResponse, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeHtml"]);
     } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlYXR1cmUvY29tcG9uZW50cy9hbGwtb3Itbm90aGluZy9hbGwtb3Itbm90aGluZy5jb21wb25lbnQuc2NzcyJ9 */"] });
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AllOrNothingComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AllOrNothingComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
                 selector: 'app-all-or-nothing',
                 templateUrl: './all-or-nothing.component.html',
                 styleUrls: ['./all-or-nothing.component.scss']
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
@@ -574,6 +733,164 @@ class Base {
         }
     }
 }
+
+
+/***/ }),
+
+/***/ "./src/app/feature/components/cash5/cash5.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/feature/components/cash5/cash5.component.ts ***!
+  \*************************************************************/
+/*! exports provided: Cash5Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cash5Component", function() { return Cash5Component; });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+class Cash5Component {
+    constructor(http) {
+        this.http = http;
+        this._data = [];
+        this.response = {};
+        this.minStartDate = new Date(2019, 0, 1);
+    }
+    ngOnInit() {
+        this.getData().subscribe(data => {
+            this.response.minStartDate = this.minStartDate;
+            this._data = data.filter(item => item.date > this.minStartDate);
+            const totalEvents = this.response.total = this.data.length;
+            const allNumbers = this.data.map(item => item.number);
+            setTimeout(() => {
+                //    4, 8, 9, 10, 12, 27, 18, 19, 20, 23, 30, 29, 32, 34, 35 --> 80
+                // 1, 4, 8, 9, 10, 12, 27, 18, 19, 20, 23, 30, 29, 32, 34, 35 --> 100
+                // 3, 4, 8, 9, 10, 12, 27, 18, 19, 20, 23, 30, 29, 32, 34, 35 --> 105
+                // 3, 4, 8, 9, 10, 12, 17, 18, 19, 20, 23, 27, 29, 30, 32, 34 --> 110
+                // 3, 4, 8, 9, 10, 12, 17, 18, 19, 20, 23, 26, 27, 29, 30, 32, 34 --> 131
+                // this.lastOccuranceOfComobo([3, 4, 8, 9, 10, 12, 17, 18, 19, 20, 23, 26, 27, 29, 30, 32, 34]);
+                // this.findMostMatchedComboNumber();
+                // this.evenOddProbability(allNumbers);
+                this.anyDigitNotFromPre();
+            }, 100);
+        });
+    }
+    anyDigitNotFromPre() {
+        let count = 0;
+        const d = this.data.reverse(); //.slice(0, 4);
+        d.forEach((item, index) => {
+            const f = item.number.filter(i => {
+                const b = index + 4 < d.length &&
+                    !d[index + 1].number.includes(i) && !d[index + 2].number.includes(i) &&
+                    !d[index + 3].number.includes(i) && !d[index + 4].number.includes(i); // &&
+                //!d[index + 5].number.includes(i);
+                return b;
+            });
+            if (f.length === 5) {
+                count++;
+                console.log(index, item.number, count, item.date);
+            }
+        });
+    }
+    evenOddProbability(allNumbers) {
+        let odd = 0;
+        allNumbers.forEach(ar => {
+            odd += (ar.filter(d => d % 2 === 1).length) > 2 ? 1 : 0;
+        });
+        this.response.odd_prob = odd * 100 / allNumbers.length;
+    }
+    lastOccuranceOfComobo(givenNumber) {
+        let t = [];
+        this.response['given_digit_combination'] = givenNumber.sort((a, b) => a - b);
+        const list = this.data.filter(item => {
+            const matched = givenNumber.filter(i => item.number.includes(i));
+            item.matchedCount = matched && matched.length;
+            item.matched = matched;
+            item.notmatched = item.number.filter(i => !givenNumber.includes(i));
+            // t.push(item.notmatched);
+            return item.matchedCount >= 4;
+        });
+        // const tr = {};
+        // t.forEach(i => tr[i] = (t[i] || 0) + 1);
+        // this.response['given_digit_combination_occurrance'] = [...list].slice(list.length - 10, list.length);
+        this.response['given_digit_combination_occurrance_hightest'] = [...list]
+            .sort((a, b) => b.matchedCount - a.matchedCount)
+            .map(item => ({ date: item.date, matchedCount: item.matchedCount, number: item.number.join(" "), matched: item.matched.join(" "), notmatched: item.notmatched }))
+            .map(item => { t = [].concat.apply([], [t, item.notmatched]); t.sort((a, b) => a - b); return item; });
+        this.response['given_digit_combination_occurrance_hightest_length'] = this.response['given_digit_combination_occurrance_hightest'].length;
+        // this.response['given_digit_combination_t'] = t;
+        this.response['given_digit_combination_occurrance_hightest'] = null;
+    }
+    findMostMatchedComboNumber() {
+        const r = {};
+        const l = this.data.length;
+        let itrs = 0;
+        const startTime = new Date().getMilliseconds();
+        for (let i = 0; i < l; i++) {
+            for (let j = i + 1; j < l; j++) {
+                if (this.data[i] && this.data[j]) {
+                    const key = this.data[i].number.filter(item => this.data[j].number.includes(item)).join("_");
+                    r[key] = (r[key] || 0) + 1;
+                    itrs++;
+                }
+            }
+        }
+        const top = Object.entries(r)
+            .filter(([key, value]) => key !== "")
+            .map(([key, value]) => ({ key: key, hitsCount: value, matchCount: key.split("_").length }))
+            .filter(item => item.hitsCount > 2 && item.matchCount === 3)
+            .sort((a, b) => b.hitsCount - a.hitsCount)
+            .slice(0, 50);
+        this.response['mostMatchedComboNumber_top'] = top;
+        this.response['mostMatchedComboNumber_iterations'] = itrs;
+        this.response['mostMatchedComboNumber_et_ms'] = new Date().getMilliseconds() - startTime;
+    }
+    get prettyResponse() {
+        return JSON.stringify(this.response, null, 2)
+            .replace(/ /g, '&nbsp;')
+            .replace(/\n/g, '<br/>');
+    }
+    get data() {
+        return [...this._data];
+    }
+    getData() {
+        return this.http.get('assets/cashfive.csv', {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]({}),
+            responseType: 'text'
+        })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(fileText => {
+            let rows = fileText.split(/\r\n|\n/);
+            return rows.map(row => {
+                const values = row.split(',');
+                return {
+                    name: values[0],
+                    number: [values[4], values[5], values[6], values[7], values[8]].map(v => parseInt(v)).sort((a, b) => a - b),
+                    date: new Date(parseInt(values[3]), parseInt(values[1]) - 1, parseInt(values[2]))
+                };
+            });
+        }));
+    }
+}
+Cash5Component.ɵfac = function Cash5Component_Factory(t) { return new (t || Cash5Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
+Cash5Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: Cash5Component, selectors: [["app-cash5"]], decls: 1, vars: 1, consts: [[3, "innerHTML"]], template: function Cash5Component_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "pre", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("innerHTML", ctx.prettyResponse, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeHtml"]);
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlYXR1cmUvY29tcG9uZW50cy9jYXNoNS9jYXNoNS5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](Cash5Component, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-cash5',
+                templateUrl: './cash5.component.html',
+                styleUrls: ['./cash5.component.scss']
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
