@@ -1,5 +1,8 @@
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import "~@swimlane/ngx-datatable/index.css";
+@import "~@swimlane/ngx-datatable/themes/material.scss";
+@import "~@swimlane/ngx-datatable/assets/icons.css";
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -50,4 +53,18 @@ button.calendar:active {
   background-repeat: no-repeat;
   background-size: 23px;
   background-position: 50%;
+}
+
+.pattern-badge {
+  min-width: 30px;
+  max-width: 30px;
+  color: transparent;
+}
+
+.bg-indigo {
+  background-color: #6610f2 !important;
+}
+
+.bg-teal {
+  background-color: #20c997 !important;
 }

@@ -1,0 +1,88 @@
+<!-- <pre [innerHTML]="prettyResponse"></pre> -->
+
+<div class="row">
+  <input type="text" class="form-control" style="padding:8px;margin:15px auto;width:30%;"
+    placeholder="Type to filter the number" [formControl]="filter" />
+
+  <input type="text" class="form-control" style="padding:8px;margin:15px auto;width:30%;"
+    placeholder="Type to filter the code" [formControl]="filterCode" />
+</div>
+
+<h4>All Results</h4>
+<ngx-datatable #table [rows]="tableData" [columns]="columns" [sorts]="[{ prop: 'name', dir: 'desc' }]"
+  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [limit]="10" class="material">
+  <ngx-datatable-column name="Name"> </ngx-datatable-column>
+  <ngx-datatable-column name="Number"> </ngx-datatable-column>
+  <ngx-datatable-column name="Ball"> </ngx-datatable-column>
+  <ngx-datatable-column name="Date">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.date | date:'MM/dd/yyyy'}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Pattern">
+    <ng-template let-row="row" ngx-datatable-cell-template>{{row.pattern}}</ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Pattern" [width]="300">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <ng-container *ngFor="let p of row.pattern.split(''); index as i">
+        <span *ngIf="p === 'B'" class="badge bg-primary pattern-badge" title="0-5">5</span>
+        <span *ngIf="p === 'C'" class="badge bg-info pattern-badge" title="6-10">10</span>
+        <span *ngIf="p === 'G'" class="badge bg-success pattern-badge" title="11-15">15</span>
+        <span *ngIf="p === 'R'" class="badge bg-danger pattern-badge" title="16-20">20</span>
+        <span *ngIf="p === 'T'" class="badge bg-teal pattern-badge" title="21-25">25</span>
+        <span *ngIf="p === 'P'" class="badge bg-indigo pattern-badge" title="26-30">30</span>
+        <span *ngIf="p === 'Y'" class="badge bg-warning pattern-badge" title="31-35">35</span>
+      </ng-container>
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>
+<div class="pb-5"></div>
+
+<h4>Pattern vs Probablity</h4>
+<ngx-datatable [rows]="getPatternProbability()" [columns]="[{ name: 'Code' }, {name: 'Probability'}]"
+  [sorts]="[{ prop: 'probability', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50"
+  rowHeight="auto" [limit]="5" class="material">
+</ngx-datatable>
+<div class="pb-5"></div>
+
+<h4>Duplicates</h4>
+<ngx-datatable [rows]="getDuplicateResults()" [columns]="columns"
+  [sorts]="[{ prop: 'name', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50" rowHeight="auto"
+  [limit]="10" class="material">
+  <ngx-datatable-column name="Name"> </ngx-datatable-column>
+  <ngx-datatable-column name="Number"> </ngx-datatable-column>
+  <ngx-datatable-column name="Ball"> </ngx-datatable-column>
+  <ngx-datatable-column name="Date">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.date | date:'MM/dd/yyyy'}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Pattern">
+    <ng-template let-row="row" ngx-datatable-cell-template>{{row.pattern}}</ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Pattern" [width]="300">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <ng-container *ngFor="let p of row.pattern.split(''); index as i">
+        <span *ngIf="p === 'B'" class="badge bg-primary pattern-badge" title="0-5">5</span>
+        <span *ngIf="p === 'C'" class="badge bg-info pattern-badge" title="6-10">10</span>
+        <span *ngIf="p === 'G'" class="badge bg-success pattern-badge" title="11-15">15</span>
+        <span *ngIf="p === 'R'" class="badge bg-danger pattern-badge" title="16-20">20</span>
+        <span *ngIf="p === 'T'" class="badge bg-teal pattern-badge" title="21-25">25</span>
+        <span *ngIf="p === 'P'" class="badge bg-indigo pattern-badge" title="26-30">30</span>
+        <span *ngIf="p === 'Y'" class="badge bg-warning pattern-badge" title="31-35">35</span>
+      </ng-container>
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>
+<div class="pb-5"></div>
+
+<div class="pb-5">
+  <h4>Pattern</h4>
+  <span class="badge bg-primary">0-5</span>
+  <span class="badge bg-info">6-10</span>
+  <span class="badge bg-success">11-15</span>
+  <span class="badge bg-danger">16-20</span>
+  <span class="badge bg-teal">21-25</span>
+  <span class="badge bg-indigo">26-30</span>
+  <span class="badge bg-warning">31-35</span>
+</div>

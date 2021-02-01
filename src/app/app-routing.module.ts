@@ -5,6 +5,7 @@ import { Cash5Component } from './feature/components/cash5/cash5.component';
 import { DataEntryComponent } from './feature/components/data-entry/data-entry.component';
 import { HomeComponent } from './feature/components/home/home.component';
 import { Pick4Component } from './feature/components/pick4/pick4.component';
+import { TwoStepComponent } from './feature/components/two-step/two-step.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
     path: 'pick4',
     component: Pick4Component,
     data: { title: 'Pick-4' },
+  },
+  {
+    path: 'two-step',
+    component: TwoStepComponent,
+    data: { title: 'Two Step' },
   },
   {
     path: 'cash5',
