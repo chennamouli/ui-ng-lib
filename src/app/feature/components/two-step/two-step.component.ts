@@ -19,7 +19,7 @@ export class TwoStepComponent implements OnInit {
   _data: any = [];
   tableData: any = [];
   response: any = {};
-  columns = [{ prop: 'name' }, { name: 'Number' }, { name: 'Ball' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
+  columns = [{ prop: 'name' }, { name: 'Number' }, { name: 'Ball' }, { name: 'BallIncludedInNumber' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
   @ViewChild(DatatableComponent) table: DatatableComponent;
   filter: AbstractControl = new FormControl('');
   filterCode: AbstractControl = new FormControl('');
@@ -64,7 +64,7 @@ export class TwoStepComponent implements OnInit {
 
   updateFilterForCode(searchInput: String) {
     // filter our data
-    const temp = this.data.filter(d => d.pattern === searchInput.toUpperCase() || !searchInput);
+    const temp = this.data.filter(d => d.pattern.indexOf(searchInput.toUpperCase()) > -1 || !searchInput);
     // update the rows
     this.tableData = temp;
     // Whenever the filter changes, always go back to the first page
@@ -114,13 +114,16 @@ export class TwoStepComponent implements OnInit {
         return rows.map(row => {
           const values = row.split(',');
           const number = [values[4], values[5], values[6], values[7]].map(v => parseInt(v)).sort((a, b) => a - b);
+          const ball = parseInt(values[8]);
           return {
             name: values[0],
             number: number,
-            ball: values[8],
+            ball: ball,
+            ballIncludedInNumber: number.includes(ball),
             date: new Date(parseInt(values[3]), parseInt(values[1]) - 1, parseInt(values[2])),
             pattern: this.getPatternCode(number),
-            key: number.join('_')
+            key: number.join('_'),
+            oddsCount: number.filter(v => v % 2 === 1).length
           }
         }).filter(data => data.name != "").reverse();
       }));

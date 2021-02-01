@@ -1,6 +1,6 @@
 <!-- <pre [innerHTML]="prettyResponse"></pre> -->
 
-<div class="row">
+<div class="row pt-5 mt-5">
   <input type="text" class="form-control" style="padding:8px;margin:15px auto;width:30%;"
     placeholder="Type to filter the number" [formControl]="filter" />
 
@@ -10,19 +10,24 @@
 
 <h4>All Results</h4>
 <ngx-datatable #table [rows]="tableData" [columns]="columns" [sorts]="[{ prop: 'name', dir: 'desc' }]"
-  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [limit]="10" class="material">
+  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [limit]="10" class="material"
+  [scrollbarH]="true" columnMode="force">
   <ngx-datatable-column name="Name"> </ngx-datatable-column>
   <ngx-datatable-column name="Number"> </ngx-datatable-column>
-  <ngx-datatable-column name="Ball"> </ngx-datatable-column>
+  <ngx-datatable-column name="Ball" [width]="100">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <span [ngClass]="{'text-danger': row.ballIncludedInNumber}">{{row.ball}}</span>
+    </ng-template>
+  </ngx-datatable-column>
   <ngx-datatable-column name="Date">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{row.date | date:'MM/dd/yyyy'}}
     </ng-template>
   </ngx-datatable-column>
-  <ngx-datatable-column name="Pattern">
+  <ngx-datatable-column name="Pattern" [width]="100">
     <ng-template let-row="row" ngx-datatable-cell-template>{{row.pattern}}</ng-template>
   </ngx-datatable-column>
-  <ngx-datatable-column name="Pattern" [width]="300">
+  <ngx-datatable-column name="Pattern" [width]="180">
     <ng-template let-row="row" ngx-datatable-cell-template>
       <ng-container *ngFor="let p of row.pattern.split(''); index as i">
         <span *ngIf="p === 'B'" class="badge bg-primary pattern-badge" title="0-5">5</span>
@@ -33,6 +38,10 @@
         <span *ngIf="p === 'P'" class="badge bg-indigo pattern-badge" title="26-30">30</span>
         <span *ngIf="p === 'Y'" class="badge bg-warning pattern-badge" title="31-35">35</span>
       </ng-container>
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="BallIncludedInNumber">
+    <ng-template let-row="row" ngx-datatable-cell-template>{{row.ballIncludedInNumber ? 'Y': 'N'}}
     </ng-template>
   </ngx-datatable-column>
 </ngx-datatable>
