@@ -25,13 +25,35 @@ export class TwoStepComponent implements OnInit {
   filterCode: AbstractControl = new FormControl('');
 
   ngOnInit(): void {
-    // this.retrieveLatestData().subscribe();
+    this.retrieveLatestData().subscribe(data => this.response.isLiveData = true);
     this.filter.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilter(value));
     this.filterCode.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilterForCode(value));
     this.retrieveData().subscribe(data => {
       this._data = this.tableData = data;
-      this.response = data;
+      this.oddNumbersProbability();
     });
+  }
+
+  oddNumbersProbability() {
+    this.response.oddNumbersProbablity = {};
+    this.response.oddNumbersProbablity.odd0 = this.oddNumberProbability(0);
+    this.response.oddNumbersProbablity.odd1 = this.oddNumberProbability(1);
+    this.response.oddNumbersProbablity.odd2 = this.oddNumberProbability(2);
+    this.response.oddNumbersProbablity.odd3 = this.oddNumberProbability(3);
+    this.response.oddNumbersProbablity.even0 = this.evenNumberProbability(0);
+    this.response.oddNumbersProbablity.even1 = this.evenNumberProbability(1);
+    this.response.oddNumbersProbablity.even2 = this.evenNumberProbability(2);
+    this.response.oddNumbersProbablity.even3 = this.evenNumberProbability(3);
+  }
+
+  private oddNumberProbability(oddCount: number): string {
+    let odd = this.data.filter(item => item.oddCount === oddCount).length;
+    return (odd * 100 / this.data.length).toFixed(2) + '%';
+  }
+
+  private evenNumberProbability(evenCount: number): string {
+    let odd = this.data.filter(item => item.evenCount === evenCount).length;
+    return (odd * 100 / this.data.length).toFixed(2) + '%';
   }
 
   getPatternCode(result: any[]) {
@@ -73,12 +95,16 @@ export class TwoStepComponent implements OnInit {
 
   getPatternProbability() {
     const map = {};
+    const counts = {};
     this.data.forEach(item => {
       map[item.pattern] = (map[item.pattern] || 0) + 1;
+      Object.keys(item.singlePatternCode).forEach(key => counts[key] = (counts[key] || 0) + item.singlePatternCode[key]);
     });
     const total = this.data.length;
     Object.keys(map).map(key => map[key] = (map[key] * 100 / total).toFixed(2));
-    return Object.entries(map).map(a => ({ code: a[0], probability: a[1] }));
+    const results: any[] = Object.entries(map).map(a => ({ code: a[0], probability: a[1] }));
+    Object.keys(counts).forEach(key => results.push(({ code: key, probability: (counts[key] * 100 / total).toFixed(2) })));
+    return results;
   }
 
   getDuplicateResults() {
@@ -115,15 +141,20 @@ export class TwoStepComponent implements OnInit {
           const values = row.split(',');
           const number = [values[4], values[5], values[6], values[7]].map(v => parseInt(v)).sort((a, b) => a - b);
           const ball = parseInt(values[8]);
+          const patternCode = this.getPatternCode(number);
+          const temp = {};
+          const singlePatternCode = patternCode.split('').map(v => temp[v] = (temp[v] || 0) + 1);
           return {
             name: values[0],
             number: number,
             ball: ball,
             ballIncludedInNumber: number.includes(ball),
             date: new Date(parseInt(values[3]), parseInt(values[1]) - 1, parseInt(values[2])),
-            pattern: this.getPatternCode(number),
+            pattern: patternCode,
+            singlePatternCode: temp,
             key: number.join('_'),
-            oddsCount: number.filter(v => v % 2 === 1).length
+            oddCount: number.filter(v => v % 2 === 1).length,
+            evenCount: number.filter(v => v % 2 === 0).length
           }
         }).filter(data => data.name != "").reverse();
       }));

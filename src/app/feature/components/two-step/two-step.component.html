@@ -1,4 +1,4 @@
-<!-- <pre [innerHTML]="prettyResponse"></pre> -->
+<pre class="pt-5 mt-5" [innerHTML]="prettyResponse"></pre>
 
 <div class="row pt-5 mt-5">
   <input type="text" class="form-control" style="padding:8px;margin:15px auto;width:30%;"
@@ -50,14 +50,14 @@
 <h4>Pattern vs Probablity</h4>
 <ngx-datatable [rows]="getPatternProbability()" [columns]="[{ name: 'Code' }, {name: 'Probability'}]"
   [sorts]="[{ prop: 'probability', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50"
-  rowHeight="auto" [limit]="5" class="material">
+  rowHeight="auto" [limit]="5" class="material" [scrollbarH]="true" columnMode="force">
 </ngx-datatable>
 <div class="pb-5"></div>
 
 <h4>Duplicates</h4>
 <ngx-datatable [rows]="getDuplicateResults()" [columns]="columns"
   [sorts]="[{ prop: 'name', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50" rowHeight="auto"
-  [limit]="10" class="material">
+  [limit]="10" class="material" [scrollbarH]="true" columnMode="force">
   <ngx-datatable-column name="Name"> </ngx-datatable-column>
   <ngx-datatable-column name="Number"> </ngx-datatable-column>
   <ngx-datatable-column name="Ball"> </ngx-datatable-column>
