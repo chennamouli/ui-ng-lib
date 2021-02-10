@@ -1,5 +1,3 @@
-<pre class="pt-5 mt-5" [innerHTML]="prettyResponse"></pre>
-
 <div class="row pt-5 mt-5">
   <input type="text" class="form-control" style="padding:8px;margin:15px auto;width:30%;"
     placeholder="Type to filter the number" [formControl]="filter" />
@@ -27,7 +25,7 @@
   <ngx-datatable-column name="Pattern" [width]="100">
     <ng-template let-row="row" ngx-datatable-cell-template>{{row.pattern}}</ng-template>
   </ngx-datatable-column>
-  <ngx-datatable-column name="Pattern" [width]="180">
+  <ngx-datatable-column name="Pattern" [width]="220">
     <ng-template let-row="row" ngx-datatable-cell-template>
       <app-pattern [pattern]="row.pattern" [showPatternLabel]="false"></app-pattern>
     </ng-template>
@@ -40,16 +38,16 @@
 <div class="pb-5"></div>
 
 <h4>Pattern vs Probablity</h4>
-<ngx-datatable [rows]="getPatternProbability()" [columns]="[{ name: 'Code' }, {name: 'Probability'}]"
+<ngx-datatable [rows]="patternProbability" [columns]="[{ name: 'Code' }, {name: 'Probability'}]"
   [sorts]="[{ prop: 'probability', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50"
   rowHeight="auto" [limit]="5" class="material" [scrollbarH]="true" columnMode="force">
 </ngx-datatable>
 <div class="pb-5"></div>
 
 <h4>Duplicates</h4>
-<ngx-datatable [rows]="getDuplicateResults()" [columns]="columns"
-  [sorts]="[{ prop: 'name', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50" rowHeight="auto"
-  [limit]="10" class="material" [scrollbarH]="true" columnMode="force">
+<ngx-datatable [rows]="duplicateResults" [columns]="columns" [sorts]="[{ prop: 'name', dir: 'desc' }]"
+  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [limit]="10" class="material"
+  [scrollbarH]="true" columnMode="force">
   <ngx-datatable-column name="Name"> </ngx-datatable-column>
   <ngx-datatable-column name="Number"> </ngx-datatable-column>
   <ngx-datatable-column name="Ball"> </ngx-datatable-column>
@@ -61,7 +59,7 @@
   <ngx-datatable-column name="Pattern">
     <ng-template let-row="row" ngx-datatable-cell-template>{{row.pattern}}</ng-template>
   </ngx-datatable-column>
-  <ngx-datatable-column name="Pattern" [width]="300">
+  <ngx-datatable-column name="Pattern" [width]="220">
     <ng-template let-row="row" ngx-datatable-cell-template>
       <app-pattern [pattern]="row.pattern"></app-pattern>
     </ng-template>
@@ -69,7 +67,4 @@
 </ngx-datatable>
 <div class="pb-5"></div>
 
-<div class="pb-5">
-  <h4>Pattern</h4>
-  <app-pattern [pattern]="'BCGRTPY'" [showPatternLabel]="true"></app-pattern>
-</div>
+<pre class="pt-5" [innerHTML]="ls.getPrettyJson(oddNumbersProbablity)"></pre>

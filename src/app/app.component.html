@@ -43,6 +43,11 @@
 <!-- Begin page content -->
 <main role="main" class="container-fluid">
   <router-outlet></router-outlet>
+
+  <div class="pb-5">
+    <h4>Pattern</h4>
+    <app-pattern [pattern]="'BCGRTPY'" [showPatternLabel]="true"></app-pattern>
+  </div>
 </main>
 
 <footer class="footer">
