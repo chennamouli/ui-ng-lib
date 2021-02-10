@@ -1,0 +1,16 @@
+<ng-container *ngFor="let p of pattern.split(''); index as i">
+  <span *ngIf="p === 'B'" class="badge bg-primary pattern-badge" [class.transparent]="!showPatternLabel"
+    title="Blue: 0-5">0-5</span>
+  <span *ngIf="p === 'C'" class="badge bg-info pattern-badge" [class.transparent]="!showPatternLabel"
+    title="Ciyan: 6-10">6-10</span>
+  <span *ngIf="p === 'G'" class="badge bg-success pattern-badge" [class.transparent]="!showPatternLabel"
+    title="Green: 11-15">11-15</span>
+  <span *ngIf="p === 'R'" class="badge bg-danger pattern-badge" [class.transparent]="!showPatternLabel"
+    title="Red: 16-20">16-20</span>
+  <span *ngIf="p === 'T'" class="badge bg-teal pattern-badge" [class.transparent]="!showPatternLabel"
+    title="Teal: 21-25">21-25</span>
+  <span *ngIf="p === 'P'" class="badge bg-indigo pattern-badge" [class.transparent]="!showPatternLabel"
+    title="Indigo: 26-30">26-30</span>
+  <span *ngIf="p === 'Y'" class="badge bg-warning pattern-badge" [class.transparent]="!showPatternLabel"
+    title="Yello: 31-35">31-35</span>
+</ng-container>

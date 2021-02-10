@@ -3,9 +3,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormControl } from '@angular/forms';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
 import { Observable } from 'rxjs';
-import { debounceTime, map, tap } from 'rxjs/operators';
+import { debounceTime, map } from 'rxjs/operators';
+import { LottoHelperService } from 'src/app/shared/services/lotto-helper/lotto-helper.service';
 
-const codes = ['B', 'C', 'G', 'R', 'T', 'P', 'Y'];
+const resultsDownloadUrl = 'https://www.txlottery.org/export/sites/lottery/Games/Texas_Two_Step/Winning_Numbers/texastwostep.csv';
 
 @Component({
   selector: 'app-two-step',
@@ -14,7 +15,7 @@ const codes = ['B', 'C', 'G', 'R', 'T', 'P', 'Y'];
 })
 export class TwoStepComponent implements OnInit {
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, public ls: LottoHelperService) { }
 
   _data: any = [];
   tableData: any = [];
@@ -25,7 +26,7 @@ export class TwoStepComponent implements OnInit {
   filterCode: AbstractControl = new FormControl('');
 
   ngOnInit(): void {
-    this.retrieveLatestData().subscribe(data => this.response.isLiveData = true);
+    this.ls.retrieveLatestData(resultsDownloadUrl).subscribe(data => this.response.isLiveData = true);
     this.filter.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilter(value));
     this.filterCode.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilterForCode(value));
     this.retrieveData().subscribe(data => {
@@ -54,18 +55,6 @@ export class TwoStepComponent implements OnInit {
   private evenNumberProbability(evenCount: number): string {
     let odd = this.data.filter(item => item.evenCount === evenCount).length;
     return (odd * 100 / this.data.length).toFixed(2) + '%';
-  }
-
-  getPatternCode(result: any[]) {
-    return result.map(v => {
-      if (v <= 5) return codes[0];
-      else if (v <= 10) return codes[1];
-      else if (v <= 15) return codes[2];
-      else if (v <= 20) return codes[3];
-      else if (v <= 25) return codes[4];
-      else if (v <= 30) return codes[5];
-      else if (v <= 35) return codes[6];
-    }).join('');
   }
 
   updateFilter(searchInput) {
@@ -141,7 +130,7 @@ export class TwoStepComponent implements OnInit {
           const values = row.split(',');
           const number = [values[4], values[5], values[6], values[7]].map(v => parseInt(v)).sort((a, b) => a - b);
           const ball = parseInt(values[8]);
-          const patternCode = this.getPatternCode(number);
+          const patternCode = this.ls.getPatternCode(number);
           const temp = {};
           const singlePatternCode = patternCode.split('').map(v => temp[v] = (temp[v] || 0) + 1);
           return {
@@ -158,13 +147,6 @@ export class TwoStepComponent implements OnInit {
           }
         }).filter(data => data.name != "").reverse();
       }));
-  }
-
-  retrieveLatestData(): Observable<any> {
-    return this.http.get('https://www.txlottery.org/export/sites/lottery/Games/Texas_Two_Step/Winning_Numbers/texastwostep.csv', {
-      headers: new HttpHeaders({}),
-      responseType: 'text'
-    }).pipe(tap(data => console.log('latest data', data)));
   }
 
 }

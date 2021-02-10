@@ -56,8 +56,12 @@ button.calendar:active {
 }
 
 .pattern-badge {
-  min-width: 30px;
-  max-width: 30px;
+  width: 38px;
+  margin: 0 1px;
+  color: black;
+}
+
+.transparent {
   color: transparent;
 }
 

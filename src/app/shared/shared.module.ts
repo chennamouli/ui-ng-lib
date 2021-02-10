@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {
   NgbDateAdapter,
   NgbDateParserFormatter,
-  NgbModule,
+  NgbModule
 } from '@ng-bootstrap/ng-bootstrap';
 import { ControlErrorComponent } from './components/control-error/control-error.component';
 import { DisableIfReqInProgressDirective } from './directives/disable-if-req-in-progress/disable-if-req-in-progress.directive';
@@ -21,4 +21,4 @@ import { CustomNgbDateParserFormatterService } from './services/custom-ngb-date-
     },
   ],
 })
-export class SharedModule {}
+export class SharedModule { }
