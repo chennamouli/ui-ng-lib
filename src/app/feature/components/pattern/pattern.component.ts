@@ -13,6 +13,10 @@ export class PatternComponent implements OnInit {
   pattern: string;
 
   @Input()
+  numberChunkWidth: number;
+
+
+  @Input()
   showPatternLabel: boolean;
 
   ngOnInit(): void {

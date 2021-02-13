@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,9 +15,9 @@ import { AllOrNothingComponent } from './feature/components/all-or-nothing/all-o
 import { Cash5Component } from './feature/components/cash5/cash5.component';
 import { DataEntryComponent } from './feature/components/data-entry/data-entry.component';
 import { HomeComponent } from './feature/components/home/home.component';
+import { PatternComponent } from './feature/components/pattern/pattern.component';
 import { Pick4Component } from './feature/components/pick4/pick4.component';
 import { TwoStepComponent } from './feature/components/two-step/two-step.component';
-import { PatternComponent } from './feature/components/pattern/pattern.component';
 
 export function createTranslateLoader(http: HttpClient) {
   // cache-buster, cb=time query paramer prevents from caching this file at the client side.
@@ -46,7 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     SharedModule,
   ],
-  providers: [httpInterceptorProviders],
+  providers: [httpInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

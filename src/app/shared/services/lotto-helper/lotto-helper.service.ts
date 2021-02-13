@@ -52,7 +52,18 @@ export class LottoHelperService {
     return [].concat.apply([], temp);
   }
 
-  getPatternCode(numberArray: any[]) {
+  getPatternCode(numberArray: any[], numberChunkWidth: number = 5) {
+    if (numberChunkWidth === 10) {
+      return numberArray.map(v => {
+        if (v <= 10) return patternCodes[0];
+        else if (v <= 20) return patternCodes[1];
+        else if (v <= 30) return patternCodes[2];
+        else if (v <= 40) return patternCodes[3];
+        else if (v <= 50) return patternCodes[4];
+        else if (v <= 60) return patternCodes[5];
+        else if (v <= 79) return patternCodes[6];
+      }).join('');
+    }
     return numberArray.map(v => {
       if (v <= 5) return patternCodes[0];
       else if (v <= 10) return patternCodes[1];

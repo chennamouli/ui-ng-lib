@@ -74,7 +74,7 @@ export class Utils {
     }
     try {
       return parseInt(value, 10);
-    } catch (error) {}
+    } catch (error) { }
     return value;
   }
 
@@ -84,7 +84,7 @@ export class Utils {
     }
     try {
       return parseFloat(value).toFixed(2);
-    } catch (error) {}
+    } catch (error) { }
     return value;
   }
 
@@ -532,7 +532,7 @@ export class Utils {
       if (el) {
         el.focus();
       }
-    } catch (error) {}
+    } catch (error) { }
   }
 
   /**
@@ -675,7 +675,7 @@ export class Utils {
         if (typeof value === 'string' && val) {
           return (
             value.trim().toLowerCase() ===
-              (val as string).trim().toLowerCase() && !flag
+            (val as string).trim().toLowerCase() && !flag
           );
         } else {
           return value === val && !flag;
@@ -715,6 +715,10 @@ export class Utils {
       (item, index) => array.indexOf(item) === index
     );
     return newArray;
+  }
+
+  static getDuplicates(arr: any[]) {
+    return arr => arr.filter((item, index) => arr.indexOf(item) != index);
   }
 
   static formatCurrency(value): any {
@@ -801,7 +805,7 @@ export class Utils {
         .transform(value.trim(), 'MM-dd-yyyy')
         .split('-');
       return dateParts[0] + '/' + dateParts[1] + '/' + dateParts[2];
-    } catch (e) {}
+    } catch (e) { }
     return null;
   }
 }
