@@ -10,23 +10,29 @@
       <input ngbButton type="radio" value="MEGA_MILLIONS"> Mega Millions
     </label>
     <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" value="POWER_BALL"> Power Ball
+    </label>
+    <label ngbButtonLabel class="btn-primary">
       <input ngbButton type="radio" value="PICK_4"> Pick 4
     </label>
   </div>
 </form>
 
-<div class="row pt-5">
-  <input type="text" class="form-control" style="padding:8px;margin:15px auto;width:30%;"
-    placeholder="Type to filter the number" [formControl]="filter" />
-
-  <input type="text" class="form-control" style="padding:8px;margin:15px auto;width:30%;"
-    placeholder="Type to filter the code" [formControl]="filterPattern" />
+<div class="row pt-3">
+  <div class="form-group col-sm-12 col-md-6">
+    <input type="text" class="form-control" placeholder="Type to filter the number"
+      [formControl]="filter">
+  </div>
+  <div class="form-group col-sm-12 col-md-6">
+    <input type="text" class="form-control" placeholder="Type to filter the code"
+      [formControl]="filterPattern">
+  </div>
 </div>
 
 <h4>All Results</h4>
-<ngx-datatable #table [rows]="tableData" [columns]="TWO_STEP_COLUMNS"
-  [sorts]="[{ prop: 'name', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50" rowHeight="auto"
-  [limit]="10" class="material" [scrollbarH]="true" columnMode="force">
+<ngx-datatable #table [rows]="tableData" [columns]="coulmns" [sorts]="[{ prop: 'name', dir: 'desc' }]"
+  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [limit]="10" class="material"
+  [scrollbarH]="true" columnMode="force">
   <ngx-datatable-column name="Name"> </ngx-datatable-column>
   <ngx-datatable-column name="Number" [width]="200"> </ngx-datatable-column>
   <ngx-datatable-column name="Ball" [width]="50">
@@ -45,7 +51,7 @@
   <ngx-datatable-column name="Pattern" [width]="220">
     <ng-template let-row="row" ngx-datatable-cell-template>
       <app-pattern [pattern]="row.pattern" [showPatternLabel]="false"
-        [numberChunkWidth]="gameControl.value === 'MEGA_MILLIONS' ? 10 : 5"></app-pattern>
+        [numberChunkWidth]="numberChunkWidth"></app-pattern>
     </ng-template>
   </ngx-datatable-column>
   <ngx-datatable-column name="BallIncludedInNumber" [width]="50">
@@ -63,9 +69,9 @@
 <div class="pb-5"></div>
 
 <h4>Duplicates</h4>
-<ngx-datatable [rows]="duplicateResults" [columns]="TWO_STEP_COLUMNS"
-  [sorts]="[{ prop: 'name', dir: 'desc' }]" [headerHeight]="50" [footerHeight]="50" rowHeight="auto"
-  [limit]="10" class="material" [scrollbarH]="true" columnMode="force">
+<ngx-datatable [rows]="duplicateResults" [columns]="coulmns" [sorts]="[{ prop: 'name', dir: 'desc' }]"
+  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [limit]="10" class="material"
+  [scrollbarH]="true" columnMode="force">
   <ngx-datatable-column name="Name"> </ngx-datatable-column>
   <ngx-datatable-column name="Number"> </ngx-datatable-column>
   <ngx-datatable-column name="Ball"> </ngx-datatable-column>
@@ -79,8 +85,7 @@
   </ngx-datatable-column>
   <ngx-datatable-column name="Pattern" [width]="220">
     <ng-template let-row="row" ngx-datatable-cell-template>
-      <app-pattern [pattern]="row.pattern"
-        [numberChunkWidth]="gameControl.value === 'MEGA_MILLIONS' ? 10 : 5"></app-pattern>
+      <app-pattern [pattern]="row.pattern" [numberChunkWidth]="numberChunkWidth"></app-pattern>
     </ng-template>
   </ngx-datatable-column>
 </ngx-datatable>

@@ -28,14 +28,16 @@ export class LottoHelperService {
   getPatternProbability(data: any[]) {
     const map = {};
     const counts = {};
+    const total = data.length;
+    // pattern probability
     data.forEach(item => {
       map[item.pattern] = (map[item.pattern] || 0) + 1;
       Object.keys(item.singlePatternCode).forEach(key => counts[key] = (counts[key] || 0) + item.singlePatternCode[key]);
     });
-    const total = data.length;
     Object.keys(map).map(key => map[key] = (map[key] * 100 / total).toFixed(2));
     const results: any[] = Object.entries(map).map(a => ({ code: a[0], probability: a[1] }));
     Object.keys(counts).forEach(key => results.push(({ code: key, probability: (counts[key] * 100 / total).toFixed(2) })));
+
     return results;
   }
 

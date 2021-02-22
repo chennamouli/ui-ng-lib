@@ -1756,8 +1756,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const _c0 = function (a0) { return { "text-danger": a0 }; };
-function TwoStepComponent_ng_template_24_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "span", 25);
+function TwoStepComponent_ng_template_29_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "span", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -1766,51 +1766,51 @@ function TwoStepComponent_ng_template_24_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r9.ball);
 } }
-function TwoStepComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
+function TwoStepComponent_ng_template_31_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](1, "date");
 } if (rf & 2) {
     const row_r10 = ctx.row;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](1, 1, row_r10.date, "MM/dd/yyyy"), " ");
 } }
-function TwoStepComponent_ng_template_28_Template(rf, ctx) { if (rf & 1) {
+function TwoStepComponent_ng_template_33_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
 } if (rf & 2) {
     const row_r11 = ctx.row;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r11.pattern);
 } }
-function TwoStepComponent_ng_template_30_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-pattern", 26);
+function TwoStepComponent_ng_template_35_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-pattern", 28);
 } if (rf & 2) {
     const row_r12 = ctx.row;
     const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r12.pattern)("showPatternLabel", false)("numberChunkWidth", ctx_r4.gameControl.value === "MEGA_MILLIONS" ? 10 : 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r12.pattern)("showPatternLabel", false)("numberChunkWidth", ctx_r4.numberChunkWidth);
 } }
-function TwoStepComponent_ng_template_32_Template(rf, ctx) { if (rf & 1) {
+function TwoStepComponent_ng_template_37_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
 } if (rf & 2) {
     const row_r13 = ctx.row;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("", row_r13.ballIncludedInNumber ? "Y" : "N", " ");
 } }
-function TwoStepComponent_ng_template_45_Template(rf, ctx) { if (rf & 1) {
+function TwoStepComponent_ng_template_50_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](1, "date");
 } if (rf & 2) {
     const row_r14 = ctx.row;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](1, 1, row_r14.date, "MM/dd/yyyy"), " ");
 } }
-function TwoStepComponent_ng_template_47_Template(rf, ctx) { if (rf & 1) {
+function TwoStepComponent_ng_template_52_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
 } if (rf & 2) {
     const row_r15 = ctx.row;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r15.pattern);
 } }
-function TwoStepComponent_ng_template_49_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-pattern", 27);
+function TwoStepComponent_ng_template_54_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-pattern", 29);
 } if (rf & 2) {
     const row_r16 = ctx.row;
     const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r16.pattern)("numberChunkWidth", ctx_r8.gameControl.value === "MEGA_MILLIONS" ? 10 : 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r16.pattern)("numberChunkWidth", ctx_r8.numberChunkWidth);
 } }
 const _c1 = function () { return { prop: "name", dir: "desc" }; };
 const _c2 = function (a0) { return [a0]; };
@@ -1823,7 +1823,8 @@ const API_LOCAL = {
     TWO_STEP: 'assets/texastwostep.csv',
     ALL_OR_NOTHING: 'assets/allornothingmorning.csv',
     MEGA_MILLIONS: 'assets/megamillions.csv',
-    PICK_4: 'assets/p4.json',
+    POWER_BALL: 'assets/powerball.csv',
+    PICK_4: 'assets/daily4morning.csv',
 };
 class TwoStepComponent {
     constructor(http, ls, fb, datePipe) {
@@ -1838,8 +1839,7 @@ class TwoStepComponent {
         this.oddNumbersProbablity = [];
         this.filter = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('');
         this.filterPattern = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('');
-        this.TWO_STEP_COLUMNS = [{ prop: 'name' }, { name: 'Number' }, { name: 'Ball' }, { name: 'BallIncludedInNumber' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
-        this.ALL_OR_NOTHING_COLUMNS = [{ prop: 'name' }, { name: 'Number' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
+        this.coulmns = [{ prop: 'name' }, { name: 'Number' }, { name: 'Ball' }, { name: 'BallIncludedInNumber' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
     }
     ngOnInit() {
         this.radioGroupForm = this.fb.group({ 'game': null });
@@ -1849,7 +1849,6 @@ class TwoStepComponent {
                 this.duplicateResults = this.ls.getDuplicateResults(this.data);
                 this.patternProbability = this.ls.getPatternProbability(this.data);
                 this.oddNumbersProbablity = this.ls.getOddNumbersProbablity(this.data);
-                // this.TWO_STEP_COLUMNS = this.TWO_STEP_COLUMNS.filter(x => x.prop !== 'ball');
             });
         });
         this.gameControl.patchValue('TWO_STEP');
@@ -1899,7 +1898,7 @@ class TwoStepComponent {
                 if (values.length === 0 || values[0] === "")
                     return;
                 const result = this.parseResult(game, values);
-                const patternCode = this.ls.getPatternCode(result.number, this.gameControl.value === 'MEGA_MILLIONS' ? 10 : 5);
+                const patternCode = this.ls.getPatternCode(result.number, this.numberChunkWidth);
                 patternCode.split('').map(v => temp[v] = (temp[v] || 0) + 1);
                 return Object.assign({ name: values[0], date: new Date(parseInt(values[3]), parseInt(values[1]) - 1, parseInt(values[2])), pattern: patternCode, singlePatternCode: temp, key: result.number.join('_'), oddCount: result.number.filter(v => v % 2 === 1).length }, result);
             }).filter(data => data && data.name != "").reverse();
@@ -1931,12 +1930,27 @@ class TwoStepComponent {
                 ballIncludedInNumber: number.includes(ball)
             };
         }
-        else if (url === 'assets/p4.json') {
+        else if (url === 'POWER_BALL') {
+            number = [values[4], values[5], values[6], values[7], values[8]].map(v => parseInt(v)).sort((a, b) => a - b);
+            ball = parseInt(values[9]);
+            return {
+                number: number,
+                ball: ball,
+                ballIncludedInNumber: number.includes(ball)
+            };
+        }
+        else if (url === 'PICK_4') {
             number = [values[4], values[5], values[6], values[7]].map(v => parseInt(v));
             return {
                 number: number,
             };
         }
+    }
+    get numberChunkWidth() {
+        if (this.gameControl.value === 'MEGA_MILLIONS' || this.gameControl.value === 'POWER_BALL') {
+            return 10;
+        }
+        return 5;
     }
     get gameControl() {
         return this.radioGroupForm.get('game');
@@ -1948,7 +1962,7 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
     } if (rf & 2) {
         var _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
-    } }, decls: 52, vars: 46, consts: [[1, "pt-5", "mt-5", 3, "formGroup"], ["ngbRadioGroup", "", "formControlName", "game", 1, "btn-group", "btn-group-toggle"], ["ngbButtonLabel", "", 1, "btn-primary"], ["ngbButton", "", "type", "radio", "value", "TWO_STEP"], ["ngbButton", "", "type", "radio", "value", "ALL_OR_NOTHING"], ["ngbButton", "", "type", "radio", "value", "MEGA_MILLIONS"], ["ngbButton", "", "type", "radio", "value", "PICK_4"], [1, "row", "pt-5"], ["type", "text", "placeholder", "Type to filter the number", 1, "form-control", 2, "padding", "8px", "margin", "15px auto", "width", "30%", 3, "formControl"], ["type", "text", "placeholder", "Type to filter the code", 1, "form-control", 2, "padding", "8px", "margin", "15px auto", "width", "30%", 3, "formControl"], ["rowHeight", "auto", "columnMode", "force", 1, "material", 3, "rows", "columns", "sorts", "headerHeight", "footerHeight", "limit", "scrollbarH"], ["table", ""], ["name", "Name"], ["name", "Number", 3, "width"], ["name", "Ball", 3, "width"], ["ngx-datatable-cell-template", ""], ["name", "Date", 3, "width"], ["name", "Pattern", 3, "width"], ["name", "BallIncludedInNumber", 3, "width"], [1, "pb-5"], ["name", "Number"], ["name", "Ball"], ["name", "Date"], ["name", "Pattern"], [1, "pt-5", 3, "innerHTML"], [3, "ngClass"], [3, "pattern", "showPatternLabel", "numberChunkWidth"], [3, "pattern", "numberChunkWidth"]], template: function TwoStepComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 57, vars: 46, consts: [[1, "pt-5", "mt-5", 3, "formGroup"], ["ngbRadioGroup", "", "formControlName", "game", 1, "btn-group", "btn-group-toggle"], ["ngbButtonLabel", "", 1, "btn-primary"], ["ngbButton", "", "type", "radio", "value", "TWO_STEP"], ["ngbButton", "", "type", "radio", "value", "ALL_OR_NOTHING"], ["ngbButton", "", "type", "radio", "value", "MEGA_MILLIONS"], ["ngbButton", "", "type", "radio", "value", "POWER_BALL"], ["ngbButton", "", "type", "radio", "value", "PICK_4"], [1, "row", "pt-3"], [1, "form-group", "col-sm-12", "col-md-6"], ["type", "text", "placeholder", "Type to filter the number", 1, "form-control", 3, "formControl"], ["type", "text", "placeholder", "Type to filter the code", 1, "form-control", 3, "formControl"], ["rowHeight", "auto", "columnMode", "force", 1, "material", 3, "rows", "columns", "sorts", "headerHeight", "footerHeight", "limit", "scrollbarH"], ["table", ""], ["name", "Name"], ["name", "Number", 3, "width"], ["name", "Ball", 3, "width"], ["ngx-datatable-cell-template", ""], ["name", "Date", 3, "width"], ["name", "Pattern", 3, "width"], ["name", "BallIncludedInNumber", 3, "width"], [1, "pb-5"], ["name", "Number"], ["name", "Ball"], ["name", "Date"], ["name", "Pattern"], [1, "pt-5", 3, "innerHTML"], [3, "ngClass"], [3, "pattern", "showPatternLabel", "numberChunkWidth"], [3, "pattern", "numberChunkWidth"]], template: function TwoStepComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "label", 2);
@@ -1965,69 +1979,77 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "label", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](12, "input", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, " Pick 4 ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, " Power Ball ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "label", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](15, "input", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, " Pick 4 ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](15, "input", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](16, "input", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](19, "input", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, "All Results");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable", 10, 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](21, "ngx-datatable-column", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](22, "ngx-datatable-column", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](23, "ngx-datatable-column", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, TwoStepComponent_ng_template_24_Template, 2, 4, "ng-template", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "ngx-datatable-column", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, TwoStepComponent_ng_template_26_Template, 2, 4, "ng-template", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "ngx-datatable-column", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, TwoStepComponent_ng_template_28_Template, 1, 1, "ng-template", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "ngx-datatable-column", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, TwoStepComponent_ng_template_30_Template, 1, 3, "ng-template", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 18);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, TwoStepComponent_ng_template_32_Template, 1, 1, "ng-template", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](21, "input", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](33, "div", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](35, "Pattern vs Probablity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](23, "All Results");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](36, "ngx-datatable", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](37, "div", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](39, "Duplicates");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "ngx-datatable", 12, 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](26, "ngx-datatable-column", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](27, "ngx-datatable-column", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, TwoStepComponent_ng_template_29_Template, 2, 4, "ng-template", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "ngx-datatable", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](41, "ngx-datatable-column", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](42, "ngx-datatable-column", 20);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](43, "ngx-datatable-column", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "ngx-datatable-column", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](45, TwoStepComponent_ng_template_45_Template, 2, 4, "ng-template", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "ngx-datatable-column", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, TwoStepComponent_ng_template_31_Template, 2, 4, "ng-template", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](46, "ngx-datatable-column", 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](47, TwoStepComponent_ng_template_47_Template, 1, 1, "ng-template", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "ngx-datatable-column", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, TwoStepComponent_ng_template_33_Template, 1, 1, "ng-template", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](48, "ngx-datatable-column", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](49, TwoStepComponent_ng_template_49_Template, 1, 2, "ng-template", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, TwoStepComponent_ng_template_35_Template, 1, 3, "ng-template", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "ngx-datatable-column", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, TwoStepComponent_ng_template_37_Template, 1, 1, "ng-template", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](50, "div", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](51, "pre", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](38, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](40, "Pattern vs Probablity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](41, "ngx-datatable", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](42, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](44, "Duplicates");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "ngx-datatable", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](46, "ngx-datatable-column", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](47, "ngx-datatable-column", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](48, "ngx-datatable-column", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](49, "ngx-datatable-column", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](50, TwoStepComponent_ng_template_50_Template, 2, 4, "ng-template", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](51, "ngx-datatable-column", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](52, TwoStepComponent_ng_template_52_Template, 1, 1, "ng-template", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](53, "ngx-datatable-column", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](54, TwoStepComponent_ng_template_54_Template, 1, 2, "ng-template", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](55, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](56, "pre", 26);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formGroup", ctx.radioGroupForm);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](19);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formControl", ctx.filter);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formControl", ctx.filterPattern);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.tableData)("columns", ctx.TWO_STEP_COLUMNS)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](33, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](32, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.tableData)("columns", ctx.coulmns)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](33, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](32, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 200);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
@@ -2043,7 +2065,7 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.patternProbability)("columns", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction2"](37, _c5, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](35, _c3), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](36, _c4)))("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](41, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](40, _c6)))("headerHeight", 50)("footerHeight", 50)("limit", 5)("scrollbarH", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.duplicateResults)("columns", ctx.TWO_STEP_COLUMNS)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](44, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](43, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.duplicateResults)("columns", ctx.coulmns)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](44, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](43, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 220);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
@@ -2599,11 +2621,12 @@ class LottoHelperService {
     getPatternProbability(data) {
         const map = {};
         const counts = {};
+        const total = data.length;
+        // pattern probability
         data.forEach(item => {
             map[item.pattern] = (map[item.pattern] || 0) + 1;
             Object.keys(item.singlePatternCode).forEach(key => counts[key] = (counts[key] || 0) + item.singlePatternCode[key]);
         });
-        const total = data.length;
         Object.keys(map).map(key => map[key] = (map[key] * 100 / total).toFixed(2));
         const results = Object.entries(map).map(a => ({ code: a[0], probability: a[1] }));
         Object.keys(counts).forEach(key => results.push(({ code: key, probability: (counts[key] * 100 / total).toFixed(2) })));

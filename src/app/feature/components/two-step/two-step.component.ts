@@ -13,7 +13,8 @@ const API_LOCAL = {
   TWO_STEP: 'assets/texastwostep.csv',
   ALL_OR_NOTHING: 'assets/allornothingmorning.csv',
   MEGA_MILLIONS: 'assets/megamillions.csv',
-  PICK_4: 'assets/p4.json',
+  POWER_BALL: 'assets/powerball.csv',
+  PICK_4: 'assets/daily4morning.csv',
 };
 
 @Component({
@@ -36,8 +37,7 @@ export class TwoStepComponent implements OnInit {
   filter: AbstractControl = new FormControl('');
   filterPattern: AbstractControl = new FormControl('');
   @ViewChild(DatatableComponent) table: DatatableComponent;
-  public TWO_STEP_COLUMNS = [{ prop: 'name' }, { name: 'Number' }, { name: 'Ball' }, { name: 'BallIncludedInNumber' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
-  public ALL_OR_NOTHING_COLUMNS = [{ prop: 'name' }, { name: 'Number' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
+  public coulmns = [{ prop: 'name' }, { name: 'Number' }, { name: 'Ball' }, { name: 'BallIncludedInNumber' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
 
   ngOnInit(): void {
     this.radioGroupForm = this.fb.group({ 'game': null });
@@ -47,7 +47,6 @@ export class TwoStepComponent implements OnInit {
         this.duplicateResults = this.ls.getDuplicateResults(this.data);
         this.patternProbability = this.ls.getPatternProbability(this.data);
         this.oddNumbersProbablity = this.ls.getOddNumbersProbablity(this.data);
-        // this.TWO_STEP_COLUMNS = this.TWO_STEP_COLUMNS.filter(x => x.prop !== 'ball');
       });
     });
     this.gameControl.patchValue('TWO_STEP');
@@ -102,7 +101,7 @@ export class TwoStepComponent implements OnInit {
           const values = row.split(',');
           if (values.length === 0 || values[0] === "") return;
           const result = this.parseResult(game, values);
-          const patternCode = this.ls.getPatternCode(result.number, this.gameControl.value === 'MEGA_MILLIONS' ? 10 : 5);
+          const patternCode = this.ls.getPatternCode(result.number, this.numberChunkWidth);
           patternCode.split('').map(v => temp[v] = (temp[v] || 0) + 1);
           return {
             name: values[0],
@@ -140,12 +139,27 @@ export class TwoStepComponent implements OnInit {
         ball: ball,
         ballIncludedInNumber: number.includes(ball)
       };
-    } else if (url === 'assets/p4.json') {
+    } else if (url === 'POWER_BALL') {
+      number = [values[4], values[5], values[6], values[7], values[8]].map(v => parseInt(v)).sort((a, b) => a - b);
+      ball = parseInt(values[9]);
+      return {
+        number: number,
+        ball: ball,
+        ballIncludedInNumber: number.includes(ball)
+      };
+    } else if (url === 'PICK_4') {
       number = [values[4], values[5], values[6], values[7]].map(v => parseInt(v));
       return {
         number: number,
       };
     }
+  }
+
+  get numberChunkWidth() {
+    if (this.gameControl.value === 'MEGA_MILLIONS' || this.gameControl.value === 'POWER_BALL') {
+      return 10
+    }
+    return 5;
   }
 
   get gameControl(): AbstractControl {
