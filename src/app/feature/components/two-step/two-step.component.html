@@ -1,6 +1,9 @@
 <form [formGroup]="radioGroupForm" class="pt-5 mt-5">
   <div class="btn-group btn-group-toggle" ngbRadioGroup formControlName="game">
     <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" value="CASH_FIVE"> Cash Five
+    </label>
+    <label ngbButtonLabel class="btn-primary">
       <input ngbButton type="radio" value="TWO_STEP"> Two Step
     </label>
     <label ngbButtonLabel class="btn-primary">
@@ -20,7 +23,7 @@
 
 <div class="row pt-3">
   <div class="form-group col-sm-12 col-md-6">
-    <input type="text" class="form-control" placeholder="Type to filter the number"
+    <input type="text" class="form-control" placeholder="Type numbers seperated by space to filter"
       [formControl]="filter">
   </div>
   <div class="form-group col-sm-12 col-md-6">
@@ -91,4 +94,5 @@
 </ngx-datatable>
 <div class="pb-5"></div>
 
-<pre class="pt-5" [innerHTML]="ls.getPrettyJson(oddNumbersProbablity)"></pre>
+<h4>Odd Numbers Probability</h4>
+<pre class="pt-1" [innerHTML]="ls.getPrettyJson(oddNumbersProbablity)"></pre>

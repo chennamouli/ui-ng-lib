@@ -15,6 +15,7 @@ const API_LOCAL = {
   MEGA_MILLIONS: 'assets/megamillions.csv',
   POWER_BALL: 'assets/powerball.csv',
   PICK_4: 'assets/daily4morning.csv',
+  CASH_FIVE: 'assets/cashfive.csv',
 };
 
 @Component({
@@ -49,7 +50,7 @@ export class TwoStepComponent implements OnInit {
         this.oddNumbersProbablity = this.ls.getOddNumbersProbablity(this.data);
       });
     });
-    this.gameControl.patchValue('TWO_STEP');
+    this.gameControl.patchValue('CASH_FIVE');
 
     // this.ls.retrieveLatestData(resultsDownloadUrl).subscribe(data => this.response.isLiveData = true);
     this.filter.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilter(value));
@@ -58,7 +59,8 @@ export class TwoStepComponent implements OnInit {
   }
 
   updateFilter(searchInput) {
-    let searchNumber = searchInput.split(',').map(v => v.trim()).filter(v => !isNaN(v)).map(v => parseInt(v));
+    const input = searchInput != null ? searchInput.trim() : searchInput;
+    let searchNumber = input.split(' ').map(v => v.trim()).filter(v => !isNaN(v)).map(v => parseInt(v));
     searchNumber = [...new Set(searchNumber)]; // removes duplicates
     // filter our data
     const temp = this.data.filter(function (d) {
@@ -149,6 +151,11 @@ export class TwoStepComponent implements OnInit {
       };
     } else if (url === 'PICK_4') {
       number = [values[4], values[5], values[6], values[7]].map(v => parseInt(v));
+      return {
+        number: number,
+      };
+    } else if (url === 'CASH_FIVE') {
+      number = [values[4], values[5], values[6], values[7], values[8]].map(v => parseInt(v));
       return {
         number: number,
       };
