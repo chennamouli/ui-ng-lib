@@ -1912,7 +1912,7 @@ class TwoStepComponent {
             number = [values[4], values[5], values[6], values[7]].map(v => parseInt(v)).sort((a, b) => a - b);
             ball = parseInt(values[8]);
             return {
-                number: number,
+                number: number.sort((a, b) => a < b ? -1 : 1),
                 ball: ball,
                 ballIncludedInNumber: number.includes(ball)
             };
@@ -1920,14 +1920,14 @@ class TwoStepComponent {
         else if (url === 'ALL_OR_NOTHING') {
             number = [values[4], values[5], values[6], values[7], values[8], values[9], values[10], values[11], values[12], values[13], values[14], values[15]].map(v => parseInt(v)).sort((a, b) => a - b);
             return {
-                number: number,
+                number: number.sort((a, b) => a < b ? -1 : 1),
             };
         }
         else if (url === 'MEGA_MILLIONS') {
             number = [values[4], values[5], values[6], values[7], values[8]].map(v => parseInt(v)).sort((a, b) => a - b);
             ball = parseInt(values[9]);
             return {
-                number: number,
+                number: number.sort((a, b) => a < b ? -1 : 1),
                 ball: ball,
                 ballIncludedInNumber: number.includes(ball)
             };
@@ -1936,7 +1936,7 @@ class TwoStepComponent {
             number = [values[4], values[5], values[6], values[7], values[8]].map(v => parseInt(v)).sort((a, b) => a - b);
             ball = parseInt(values[9]);
             return {
-                number: number,
+                number: number.sort((a, b) => a < b ? -1 : 1),
                 ball: ball,
                 ballIncludedInNumber: number.includes(ball)
             };
@@ -1950,7 +1950,7 @@ class TwoStepComponent {
         else if (url === 'CASH_FIVE') {
             number = [values[4], values[5], values[6], values[7], values[8]].map(v => parseInt(v));
             return {
-                number: number,
+                number: number.sort((a, b) => a < b ? -1 : 1),
             };
         }
     }
