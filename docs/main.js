@@ -1857,9 +1857,13 @@ class TwoStepComponent {
         // this.ls.retrieveLatestData(resultsDownloadUrl).subscribe(data => this.response.isLiveData = true);
         this.filter.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["debounceTime"])(400)).subscribe(value => this.updateFilter(value));
         this.filterPattern.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["debounceTime"])(400)).subscribe(value => this.updateFilterForCode(value));
-        this.retrieveData(API_LOCAL.POWER_BALL_LIVE).subscribe(data => {
-            alert("Retrieved live data successfully!");
-        }, (error) => alert('Failed to retrieve live data!!!'));
+        if (location.hostname === 'chennamouli.github.io') {
+            fetch(API_LOCAL.POWER_BALL_LIVE, { mode: 'no-cors' })
+                .then(value => {
+                console.log('Live Data: ', value);
+                alert('Retrieved live data!');
+            });
+        }
     }
     updateFilter(searchInput) {
         const input = searchInput != null ? searchInput.trim() : searchInput;

@@ -58,9 +58,15 @@ export class TwoStepComponent implements OnInit {
     this.filter.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilter(value));
     this.filterPattern.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilterForCode(value));
 
-    this.retrieveData(API_LOCAL.POWER_BALL_LIVE).subscribe(data => {
-      alert("Retrieved live data successfully!")
-    }, (error) => alert('Failed to retrieve live data!!!'));
+
+    if (location.hostname === 'chennamouli.github.io') {
+      fetch(API_LOCAL.POWER_BALL_LIVE, { mode: 'no-cors' })
+        .then(value => {
+          console.log('Live Data: ', value);
+          alert('Retrieved live data!')
+        });
+    }
+
   }
 
   updateFilter(searchInput) {
