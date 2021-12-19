@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { debounceTime, map } from 'rxjs/operators';
 import { LottoHelperService } from 'src/app/shared/services/lotto-helper/lotto-helper.service';
 
@@ -11,12 +11,15 @@ const resultsDownloadUrl = 'https://www.txlottery.org/export/sites/lottery/Games
 
 const API_LOCAL = {
   TWO_STEP: 'assets/texastwostep.csv',
+  TWO_STEP_LIVE: 'https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/texastwostep.csv',
   ALL_OR_NOTHING: 'assets/allornothingmorning.csv',
   MEGA_MILLIONS: 'assets/megamillions.csv',
+  MEGA_MILLIONS_LIVE: 'https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/megamillions.csv',
   POWER_BALL: 'assets/powerball.csv',
   POWER_BALL_LIVE: 'https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/powerball.csv',
   PICK_4: 'assets/daily4morning.csv',
   CASH_FIVE: 'assets/cashfive.csv',
+  CASH_FIVE_LIVE: 'https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/cashfive.csv',
 };
 
 
@@ -103,10 +106,19 @@ export class TwoStepComponent implements OnInit {
   }
 
   retrieveData(game: string): Observable<any> {
-    return this.http.get(API_LOCAL[game], {
+    const localData = this.http.get(API_LOCAL[game], {
       headers: new HttpHeaders({}),
       responseType: 'text'
-    })
+    });
+
+    let dataObservable = localData;
+
+    if (location.hostname === 'chennamouli.github.io'
+      && (game === 'TWO_STEP' || game === 'MEGA_MILLIONS_LIVE' || game === 'POWER_BALL_LIVE' || game === 'CASH_FIVE_LIVE')) {
+      dataObservable = from(fetch(API_LOCAL[game + '_LIVE'], { mode: 'no-cors' })) as any;
+    }
+
+    return dataObservable
       .pipe(map(fileText => {
         let rows = (<string>fileText).split(/\r\n|\n/);
         return rows.map(row => {
