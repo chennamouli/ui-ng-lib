@@ -14,9 +14,11 @@ const API_LOCAL = {
   ALL_OR_NOTHING: 'assets/allornothingmorning.csv',
   MEGA_MILLIONS: 'assets/megamillions.csv',
   POWER_BALL: 'assets/powerball.csv',
+  POWER_BALL_LIVE: 'https://www.texaslottery.com/export/sites/lottery/Games/Powerball/Winning_Numbers/powerball.csv',
   PICK_4: 'assets/daily4morning.csv',
   CASH_FIVE: 'assets/cashfive.csv',
 };
+
 
 @Component({
   selector: 'app-two-step',
@@ -56,6 +58,9 @@ export class TwoStepComponent implements OnInit {
     this.filter.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilter(value));
     this.filterPattern.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilterForCode(value));
 
+    this.retrieveData(API_LOCAL.POWER_BALL_LIVE).subscribe(data => {
+      alert("Retrieved live data successfully!")
+    }, (error) => alert('Failed to retrieve live data!!!'));
   }
 
   updateFilter(searchInput) {
