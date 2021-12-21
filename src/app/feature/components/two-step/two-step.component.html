@@ -19,6 +19,7 @@
       <input ngbButton type="radio" value="PICK_4"> Pick 4
     </label>
   </div>
+  <div style="float: right;">{{hostname}}</div>
 </form>
 
 <div class="row pt-3">
@@ -96,3 +97,9 @@
 
 <h4>Odd Numbers Probability</h4>
 <pre class="pt-1" [innerHTML]="ls.getPrettyJson(oddNumbersProbablity)"></pre>
+
+<h4>Combinations</h4>
+<pre *ngIf="this.combos" class="pt-1" [innerHTML]="ls.getPrettyJson(this.combos)">Finding...</pre>
+
+{{strike_out_numbers}}
+<app-strike-out [strike_out_numbers]="this.strike_out_numbers"></app-strike-out>

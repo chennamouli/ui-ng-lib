@@ -1,0 +1,5 @@
+<div class="container">
+  <div *ngFor="let i of numbers" class="item badge badge-pill badge-light"
+    [class.selected]="this.strike_out_numbers.indexOf(i) >= 0">{{i}}
+  </div>
+</div>

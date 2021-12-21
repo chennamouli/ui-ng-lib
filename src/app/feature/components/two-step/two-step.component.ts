@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { DatatableComponent } from '@swimlane/ngx-datatable';
-import { from, Observable } from 'rxjs';
+import { BehaviorSubject, from, Observable } from 'rxjs';
 import { debounceTime, map } from 'rxjs/operators';
 import { LottoHelperService } from 'src/app/shared/services/lotto-helper/lotto-helper.service';
 
@@ -32,6 +32,10 @@ export class TwoStepComponent implements OnInit {
 
   constructor(public http: HttpClient, public ls: LottoHelperService, private fb: FormBuilder, private datePipe: DatePipe) { }
 
+  hostname: string;
+  number_combination: Map<string, number>;
+  strike_out_numbers: any[] = [];
+
   _data: any = [];
   tableData: any = [];
 
@@ -45,7 +49,11 @@ export class TwoStepComponent implements OnInit {
   @ViewChild(DatatableComponent) table: DatatableComponent;
   public coulmns = [{ prop: 'name' }, { name: 'Number' }, { name: 'Ball' }, { name: 'BallIncludedInNumber' }, { name: 'Date' }, { name: 'Pattern' }, { name: 'Code' }];
 
+  public combosObsevable: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+
+
   ngOnInit(): void {
+    this.hostname = location.hostname;
     this.radioGroupForm = this.fb.group({ 'game': null });
     this.gameControl.valueChanges.subscribe(value => {
       this.retrieveData(value).subscribe(data => {
@@ -53,6 +61,16 @@ export class TwoStepComponent implements OnInit {
         this.duplicateResults = this.ls.getDuplicateResults(this.data);
         this.patternProbability = this.ls.getPatternProbability(this.data);
         this.oddNumbersProbablity = this.ls.getOddNumbersProbablity(this.data);
+        this.strike_out_numbers = [];
+        this.tableData.forEach((item, i) => {
+          if (i <= 5)
+            this.strike_out_numbers = [...this.strike_out_numbers, ...item.number]
+        });
+        this.strike_out_numbers = [...new Set(this.strike_out_numbers)].sort((a, b) => a - b);
+
+        setTimeout(() => {
+          this.combosObsevable.next(this.findNumberCombinations());
+        }, 500);
       });
     });
     this.gameControl.patchValue('CASH_FIVE');
@@ -73,6 +91,22 @@ export class TwoStepComponent implements OnInit {
   }
 
   updateFilter(searchInput) {
+    // const input = searchInput != null ? searchInput.trim() : searchInput;
+    // let searchNumber = input.split(' ').map(v => v.trim()).filter(v => !isNaN(v)).map(v => parseInt(v));
+    // searchNumber = [...new Set(searchNumber)]; // removes duplicates
+    // // filter our data
+    // const temp = this.data.filter(function (d) {
+    //   const commonValues = d.number.filter(value => searchNumber.includes(value));
+    //   // return d.number.toLowerCase().indexOf(val) !== -1 || !val;
+    //   return commonValues.length === searchNumber.length || !searchInput;
+    // });
+    // update the rows
+    this.tableData = this.filterResults(searchInput);
+    // Whenever the filter changes, always go back to the first page
+    this.table.offset = 0;
+  }
+
+  filterResults(searchInput) {
     const input = searchInput != null ? searchInput.trim() : searchInput;
     let searchNumber = input.split(' ').map(v => v.trim()).filter(v => !isNaN(v)).map(v => parseInt(v));
     searchNumber = [...new Set(searchNumber)]; // removes duplicates
@@ -82,10 +116,7 @@ export class TwoStepComponent implements OnInit {
       // return d.number.toLowerCase().indexOf(val) !== -1 || !val;
       return commonValues.length === searchNumber.length || !searchInput;
     });
-    // update the rows
-    this.tableData = temp;
-    // Whenever the filter changes, always go back to the first page
-    this.table.offset = 0;
+    return temp;
   }
 
   updateFilterForCode(searchInput: String) {
@@ -195,5 +226,35 @@ export class TwoStepComponent implements OnInit {
   get gameControl(): AbstractControl {
     return this.radioGroupForm.get('game');
   }
+
+  findNumberCombinations() {
+    this.number_combination = new Map();
+    this.tableData.forEach(item => {
+      const number = item.number || [];
+      for (let i = 0; i < 5; i++) {
+        for (let j = i + 1; j < 5; j++) {
+          for (let k = j + 1; k < 5; k++) {
+            const key = number[i] + "_" + number[j] + "_" + number[k];
+            this.number_combination[key] = (this.number_combination[key] || 0) + 1;
+          }
+        }
+      }
+    });
+
+    let t = new Map([...Object.entries(this.number_combination)].sort((a, b) => b[1] - a[1]));
+    // this.number_combination = new Map(Array.from(t).slice(0, 10))
+    const s = new Map(Array.from(t).slice(0, 10));
+    console.log('Combos', this.number_combination = s);
+    setTimeout(() => {
+      return s;
+    }, 2000);
+  }
+
+  get combos() {
+    if (!this.number_combination) return null;
+    return Array.from(this.number_combination).slice(0, 10);
+  }
+
+
 
 }

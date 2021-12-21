@@ -18,6 +18,7 @@ import { HomeComponent } from './feature/components/home/home.component';
 import { PatternComponent } from './feature/components/pattern/pattern.component';
 import { Pick4Component } from './feature/components/pick4/pick4.component';
 import { TwoStepComponent } from './feature/components/two-step/two-step.component';
+import { StrikeOutComponent } from './feature/components/strike-out/strike-out.component';
 
 export function createTranslateLoader(http: HttpClient) {
   // cache-buster, cb=time query paramer prevents from caching this file at the client side.
@@ -29,7 +30,7 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, DataEntryComponent, HomeComponent, Pick4Component, AllOrNothingComponent, Cash5Component, TwoStepComponent, PatternComponent],
+  declarations: [AppComponent, DataEntryComponent, HomeComponent, Pick4Component, AllOrNothingComponent, Cash5Component, TwoStepComponent, PatternComponent, StrikeOutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
