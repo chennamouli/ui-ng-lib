@@ -1,5 +1,11 @@
 <div class="container">
-  <div *ngFor="let i of numbers" class="item badge badge-pill badge-light"
-    [class.selected]="this.strike_out_numbers.indexOf(i) >= 0">{{i}}
+  <div *ngFor="let i of numbers" class="item badge badge-pill border-light "
+    [ngClass]="{'border-green': this.most_repeated_numbers?.indexOf(i) >= 0, 'border-red2': this.less_repeated_numbers?.indexOf(i) >= 0, 'selected': this.strike_out_numbers.indexOf(i) >= 0}">
+    {{i}}
+  </div>
+  <div>
+    <p>Gray background circle: Hit number in last 4 draws</p>
+    <p>Green bordered circle: Most repeated number</p>
+    <!-- <p>Red bordered circle: Less repeated number</p> -->
   </div>
 </div>

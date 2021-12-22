@@ -1740,6 +1740,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const _c0 = function (a0, a1, a2) { return { "border-green": a0, "border-red2": a1, "selected": a2 }; };
 function StrikeOutComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
@@ -1747,9 +1748,9 @@ function StrikeOutComponent_div_1_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const i_r1 = ctx.$implicit;
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("selected", ctx_r0.strike_out_numbers.indexOf(i_r1) >= 0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction3"](2, _c0, (ctx_r0.most_repeated_numbers == null ? null : ctx_r0.most_repeated_numbers.indexOf(i_r1)) >= 0, (ctx_r0.less_repeated_numbers == null ? null : ctx_r0.less_repeated_numbers.indexOf(i_r1)) >= 0, ctx_r0.strike_out_numbers.indexOf(i_r1) >= 0));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("", i_r1, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", i_r1, " ");
 } }
 class StrikeOutComponent {
     constructor() {
@@ -1762,14 +1763,22 @@ class StrikeOutComponent {
     }
 }
 StrikeOutComponent.ɵfac = function StrikeOutComponent_Factory(t) { return new (t || StrikeOutComponent)(); };
-StrikeOutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: StrikeOutComponent, selectors: [["app-strike-out"]], inputs: { strike_out_numbers: "strike_out_numbers" }, decls: 2, vars: 1, consts: [[1, "container"], ["class", "item badge badge-pill badge-light", 3, "selected", 4, "ngFor", "ngForOf"], [1, "item", "badge", "badge-pill", "badge-light"]], template: function StrikeOutComponent_Template(rf, ctx) { if (rf & 1) {
+StrikeOutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: StrikeOutComponent, selectors: [["app-strike-out"]], inputs: { strike_out_numbers: "strike_out_numbers", most_repeated_numbers: "most_repeated_numbers", less_repeated_numbers: "less_repeated_numbers" }, decls: 7, vars: 1, consts: [[1, "container"], ["class", "item badge badge-pill border-light ", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "item", "badge", "badge-pill", "border-light", 3, "ngClass"]], template: function StrikeOutComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, StrikeOutComponent_div_1_Template, 2, 3, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, StrikeOutComponent_div_1_Template, 2, 6, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Gray background circle: Hit number in last 4 draws");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Green bordered circle: Most repeated number");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.numbers);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]], styles: [".container[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 10px;\n  gap: 10px 20px;\n  \n  row-gap: 10px;\n  column-gap: 20px;\n  flex-wrap: wrap;\n}\n\n.item[_ngcontent-%COMP%] {\n  width: 35px;\n  height: 35px;\n  text-align: center;\n  padding-top: 10px;\n  border-radius: 22px;\n}\n\n.badge[_ngcontent-%COMP%] {\n  color: black !important;\n}\n\n.selected[_ngcontent-%COMP%] {\n  background-color: lightblue;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZmVhdHVyZS9jb21wb25lbnRzL3N0cmlrZS1vdXQvc3RyaWtlLW91dC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFFQSxTQUFBO0VBQ0EsY0FBQTtFQUFnQix1QkFBQTtFQUNoQixhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0FBQ0Y7O0FBRUE7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxtQkFBQTtBQUNGOztBQUNBO0VBQ0UsdUJBQUE7QUFFRjs7QUFDQTtFQUNFLDJCQUFBO0FBRUYiLCJmaWxlIjoic3JjL2FwcC9mZWF0dXJlL2NvbXBvbmVudHMvc3RyaWtlLW91dC9zdHJpa2Utb3V0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG5cbiAgZ2FwOiAxMHB4O1xuICBnYXA6IDEwcHggMjBweDsgLyogcm93LWdhcCBjb2x1bW4gZ2FwICovXG4gIHJvdy1nYXA6IDEwcHg7XG4gIGNvbHVtbi1nYXA6IDIwcHg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cblxuLml0ZW0ge1xuICB3aWR0aDogMzVweDtcbiAgaGVpZ2h0OiAzNXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBhZGRpbmctdG9wOiAxMHB4O1xuICBib3JkZXItcmFkaXVzOiAyMnB4O1xufVxuLmJhZGdlIHtcbiAgY29sb3I6IGJsYWNrICFpbXBvcnRhbnQ7XG59XG5cbi5zZWxlY3RlZCB7XG4gIGJhY2tncm91bmQtY29sb3I6IGxpZ2h0Ymx1ZTtcbn1cbiJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]], styles: [".container[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 10px;\n  gap: 10px 20px;\n  \n  row-gap: 10px;\n  column-gap: 20px;\n  flex-wrap: wrap;\n}\n\n.item[_ngcontent-%COMP%] {\n  width: 35px;\n  height: 35px;\n  text-align: center;\n  padding-top: 10px;\n  border-radius: 22px;\n}\n\n.badge[_ngcontent-%COMP%] {\n  color: black !important;\n}\n\n.selected[_ngcontent-%COMP%] {\n  background-color: #ddd;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZmVhdHVyZS9jb21wb25lbnRzL3N0cmlrZS1vdXQvc3RyaWtlLW91dC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQUE7RUFFQSxTQUFBO0VBQ0EsY0FBQTtFQUFnQix1QkFBQTtFQUNoQixhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0FBQ0Y7O0FBRUE7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSxtQkFBQTtBQUNGOztBQUNBO0VBQ0UsdUJBQUE7QUFFRjs7QUFDQTtFQUNFLHNCQUFBO0FBRUYiLCJmaWxlIjoic3JjL2FwcC9mZWF0dXJlL2NvbXBvbmVudHMvc3RyaWtlLW91dC9zdHJpa2Utb3V0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGZsZXg7XG5cbiAgZ2FwOiAxMHB4O1xuICBnYXA6IDEwcHggMjBweDsgLyogcm93LWdhcCBjb2x1bW4gZ2FwICovXG4gIHJvdy1nYXA6IDEwcHg7XG4gIGNvbHVtbi1nYXA6IDIwcHg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cblxuLml0ZW0ge1xuICB3aWR0aDogMzVweDtcbiAgaGVpZ2h0OiAzNXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBhZGRpbmctdG9wOiAxMHB4O1xuICBib3JkZXItcmFkaXVzOiAyMnB4O1xufVxuLmJhZGdlIHtcbiAgY29sb3I6IGJsYWNrICFpbXBvcnRhbnQ7XG59XG5cbi5zZWxlY3RlZCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNkZGQ7XG59XG4iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](StrikeOutComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1778,6 +1787,10 @@ StrikeOutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
                 styleUrls: ['./strike-out.component.scss']
             }]
     }], function () { return []; }, { strike_out_numbers: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], most_repeated_numbers: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }], less_repeated_numbers: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }] }); })();
 
@@ -1826,64 +1839,72 @@ function TwoStepComponent_ng_template_34_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const row_r10 = ctx.row;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](2, _c0, row_r10.ballIncludedInNumber));
+    const row_r11 = ctx.row;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](2, _c0, row_r11.ballIncludedInNumber));
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r10.ball);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r11.ball);
 } }
 function TwoStepComponent_ng_template_36_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](1, "date");
 } if (rf & 2) {
-    const row_r11 = ctx.row;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](1, 1, row_r11.date, "MM/dd/yyyy"), " ");
+    const row_r12 = ctx.row;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](1, 1, row_r12.date, "MM/dd/yyyy"), " ");
 } }
 function TwoStepComponent_ng_template_38_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
 } if (rf & 2) {
-    const row_r12 = ctx.row;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r12.pattern);
+    const row_r13 = ctx.row;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r13.pattern);
 } }
 function TwoStepComponent_ng_template_40_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-pattern", 32);
 } if (rf & 2) {
-    const row_r13 = ctx.row;
+    const row_r14 = ctx.row;
     const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r13.pattern)("showPatternLabel", false)("numberChunkWidth", ctx_r4.numberChunkWidth);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r14.pattern)("showPatternLabel", false)("numberChunkWidth", ctx_r4.numberChunkWidth);
 } }
 function TwoStepComponent_ng_template_42_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
 } if (rf & 2) {
-    const row_r14 = ctx.row;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("", row_r14.ballIncludedInNumber ? "Y" : "N", " ");
+    const row_r15 = ctx.row;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("", row_r15.ballIncludedInNumber ? "Y" : "N", " ");
 } }
 function TwoStepComponent_ng_template_55_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](1, "date");
 } if (rf & 2) {
-    const row_r15 = ctx.row;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](1, 1, row_r15.date, "MM/dd/yyyy"), " ");
+    const row_r16 = ctx.row;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](1, 1, row_r16.date, "MM/dd/yyyy"), " ");
 } }
 function TwoStepComponent_ng_template_57_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0);
 } if (rf & 2) {
-    const row_r16 = ctx.row;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r16.pattern);
+    const row_r17 = ctx.row;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](row_r17.pattern);
 } }
 function TwoStepComponent_ng_template_59_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-pattern", 33);
 } if (rf & 2) {
-    const row_r17 = ctx.row;
+    const row_r18 = ctx.row;
     const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r17.pattern)("numberChunkWidth", ctx_r8.numberChunkWidth);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("pattern", row_r18.pattern)("numberChunkWidth", ctx_r8.numberChunkWidth);
 } }
 function TwoStepComponent_pre_66_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "pre", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "pre", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "Finding...");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("innerHTML", ctx_r9.ls.getPrettyJson(ctx_r9.combos), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeHtml"]);
+} }
+function TwoStepComponent_pre_71_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "pre", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "Finding...");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("innerHTML", ctx_r10.ls.getPrettyJson(ctx_r10.most_repeated_numbers), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeHtml"]);
 } }
 const _c1 = function () { return { prop: "name", dir: "desc" }; };
 const _c2 = function (a0) { return [a0]; };
@@ -1932,26 +1953,29 @@ class TwoStepComponent {
                 this.oddNumbersProbablity = this.ls.getOddNumbersProbablity(this.data);
                 this.strike_out_numbers = [];
                 this.tableData.forEach((item, i) => {
-                    if (i <= 5)
+                    if (i <= 4)
                         this.strike_out_numbers = [...this.strike_out_numbers, ...item.number];
                 });
                 this.strike_out_numbers = [...new Set(this.strike_out_numbers)].sort((a, b) => a - b);
                 setTimeout(() => {
                     this.combosObsevable.next(this.findNumberCombinations());
                 }, 500);
+                setTimeout(() => {
+                    this.findMostRepeatedNumbers();
+                }, 1000);
             });
         });
         this.gameControl.patchValue('CASH_FIVE');
         // this.ls.retrieveLatestData(resultsDownloadUrl).subscribe(data => this.response.isLiveData = true);
         this.filter.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(400)).subscribe(value => this.updateFilter(value));
         this.filterPattern.valueChanges.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["debounceTime"])(400)).subscribe(value => this.updateFilterForCode(value));
-        if (location.hostname === 'chennamouli.github.io') {
-            fetch(API_LOCAL.POWER_BALL_LIVE, { mode: 'no-cors' })
-                .then(value => {
-                console.log('Live Data: ', value);
-                alert('Retrieved live data!');
-            });
-        }
+        // if (location.hostname === 'chennamouli.github.io') {
+        //   fetch(API_LOCAL.POWER_BALL_LIVE, { mode: 'no-cors' })
+        //     .then(value => {
+        //       console.log('Live Data: ', value);
+        //       alert('Retrieved live data!')
+        //     });
+        // }
     }
     updateFilter(searchInput) {
         // const input = searchInput != null ? searchInput.trim() : searchInput;
@@ -2004,6 +2028,7 @@ class TwoStepComponent {
         if (location.hostname === 'chennamouli.github.io'
             && (game === 'TWO_STEP' || game === 'MEGA_MILLIONS_LIVE' || game === 'POWER_BALL_LIVE' || game === 'CASH_FIVE_LIVE')) {
             dataObservable = Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["from"])(fetch(API_LOCAL[game + '_LIVE'], { mode: 'no-cors' }));
+            this.hostname = API_LOCAL[game + '_LIVE'];
         }
         return dataObservable
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(fileText => {
@@ -2083,10 +2108,10 @@ class TwoStepComponent {
             const number = item.number || [];
             for (let i = 0; i < 5; i++) {
                 for (let j = i + 1; j < 5; j++) {
-                    for (let k = j + 1; k < 5; k++) {
-                        const key = number[i] + "_" + number[j] + "_" + number[k];
-                        this.number_combination[key] = (this.number_combination[key] || 0) + 1;
-                    }
+                    // for (let k = j + 1; k < 5; k++) {
+                    const key = number[i] + "_" + number[j]; //+ "_" + number[k];
+                    this.number_combination[key] = (this.number_combination[key] || 0) + 1;
+                    // }
                 }
             }
         });
@@ -2098,10 +2123,37 @@ class TwoStepComponent {
             return s;
         }, 2000);
     }
+    findMostRepeatedNumbers() {
+        // console.log('findMostRepeatedNumbers', new Date())
+        const results = {};
+        this.tableData
+            // .filter((item, i) => i < 100)
+            .forEach(item => {
+            const number = item.number || [];
+            number.forEach(element => {
+                results[element] = (results[element] || 0) + 1;
+            });
+        });
+        let t = [...Object.entries(results)].sort((a, b) => b[1] - a[1]);
+        // console.log('Most repeated numbers', this.most_repeated_numbers = t);
+        // console.log('findMostRepeatedNumbers', new Date())
+        const l = t.slice(t.length / 2, t.length)
+            .map((item) => item[0] * 1);
+        const m = t.slice(0, t.length / 2)
+            .map((item) => item[0] * 1);
+        this.most_repeated_numbers = m;
+        this.less_repeated_numbers = l;
+        console.log('****', this.most_repeated_numbers = m, this.less_repeated_numbers = l);
+    }
     get combos() {
         if (!this.number_combination)
             return null;
         return Array.from(this.number_combination).slice(0, 10);
+    }
+    get repeatedNumbers() {
+        if (!this.most_repeated_numbers)
+            return null;
+        return this.most_repeated_numbers;
     }
 }
 TwoStepComponent.ɵfac = function TwoStepComponent_Factory(t) { return new (t || TwoStepComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_services_lotto_helper_lotto_helper_service__WEBPACK_IMPORTED_MODULE_6__["LottoHelperService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"])); };
@@ -2110,7 +2162,7 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
     } if (rf & 2) {
         var _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
-    } }, decls: 69, vars: 50, consts: [[1, "pt-5", "mt-5", 3, "formGroup"], ["ngbRadioGroup", "", "formControlName", "game", 1, "btn-group", "btn-group-toggle"], ["ngbButtonLabel", "", 1, "btn-primary"], ["ngbButton", "", "type", "radio", "value", "CASH_FIVE"], ["ngbButton", "", "type", "radio", "value", "TWO_STEP"], ["ngbButton", "", "type", "radio", "value", "ALL_OR_NOTHING"], ["ngbButton", "", "type", "radio", "value", "MEGA_MILLIONS"], ["ngbButton", "", "type", "radio", "value", "POWER_BALL"], ["ngbButton", "", "type", "radio", "value", "PICK_4"], [2, "float", "right"], [1, "row", "pt-3"], [1, "form-group", "col-sm-12", "col-md-6"], ["type", "text", "placeholder", "Type numbers seperated by space to filter", 1, "form-control", 3, "formControl"], ["type", "text", "placeholder", "Type to filter the code", 1, "form-control", 3, "formControl"], ["rowHeight", "auto", "columnMode", "force", 1, "material", 3, "rows", "columns", "sorts", "headerHeight", "footerHeight", "limit", "scrollbarH"], ["table", ""], ["name", "Name"], ["name", "Number", 3, "width"], ["name", "Ball", 3, "width"], ["ngx-datatable-cell-template", ""], ["name", "Date", 3, "width"], ["name", "Pattern", 3, "width"], ["name", "BallIncludedInNumber", 3, "width"], [1, "pb-5"], ["name", "Number"], ["name", "Ball"], ["name", "Date"], ["name", "Pattern"], [1, "pt-1", 3, "innerHTML"], ["class", "pt-1", 3, "innerHTML", 4, "ngIf"], [3, "strike_out_numbers"], [3, "ngClass"], [3, "pattern", "showPatternLabel", "numberChunkWidth"], [3, "pattern", "numberChunkWidth"]], template: function TwoStepComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 72, vars: 54, consts: [[1, "pt-5", "mt-5", 3, "formGroup"], ["ngbRadioGroup", "", "formControlName", "game", 1, "btn-group", "btn-group-toggle"], ["ngbButtonLabel", "", 1, "btn-primary"], ["ngbButton", "", "type", "radio", "value", "CASH_FIVE"], ["ngbButton", "", "type", "radio", "value", "TWO_STEP"], ["ngbButton", "", "type", "radio", "value", "ALL_OR_NOTHING"], ["ngbButton", "", "type", "radio", "value", "MEGA_MILLIONS"], ["ngbButton", "", "type", "radio", "value", "POWER_BALL"], ["ngbButton", "", "type", "radio", "value", "PICK_4"], [2, "float", "right"], [1, "row", "pt-3"], [1, "form-group", "col-sm-12", "col-md-6"], ["type", "text", "placeholder", "Type numbers seperated by space to filter", 1, "form-control", 3, "formControl"], ["type", "text", "placeholder", "Type to filter the code", 1, "form-control", 3, "formControl"], ["rowHeight", "auto", "columnMode", "force", 1, "material", 3, "rows", "columns", "sorts", "headerHeight", "footerHeight", "limit", "scrollbarH"], ["table", ""], ["name", "Name"], ["name", "Number", 3, "width"], ["name", "Ball", 3, "width"], ["ngx-datatable-cell-template", ""], ["name", "Date", 3, "width"], ["name", "Pattern", 3, "width"], ["name", "BallIncludedInNumber", 3, "width"], [1, "pb-5"], ["name", "Number"], ["name", "Ball"], ["name", "Pattern"], [1, "pt-1", 3, "innerHTML"], ["class", "pt-1", 3, "innerHTML", 4, "ngIf"], [3, "strike_out_numbers", "most_repeated_numbers", "less_repeated_numbers"], ["class", "pt-1", "id", "repeated_numbers", 3, "innerHTML", 4, "ngIf"], [3, "ngClass"], [3, "pattern", "showPatternLabel", "numberChunkWidth"], [3, "pattern", "numberChunkWidth"], ["id", "repeated_numbers", 1, "pt-1", 3, "innerHTML"]], template: function TwoStepComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "label", 2);
@@ -2185,10 +2237,10 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](51, "ngx-datatable-column", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](52, "ngx-datatable-column", 24);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](53, "ngx-datatable-column", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](54, "ngx-datatable-column", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](54, "ngx-datatable-column", 20);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](55, TwoStepComponent_ng_template_55_Template, 2, 4, "ng-template", 19);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](56, "ngx-datatable-column", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](56, "ngx-datatable-column", 26);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](57, TwoStepComponent_ng_template_57_Template, 1, 1, "ng-template", 19);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](58, "ngx-datatable-column", 21);
@@ -2199,13 +2251,17 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](61, "h4");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](62, "Odd Numbers Probability");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](63, "pre", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](63, "pre", 27);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](64, "h4");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](65, "Combinations");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](66, TwoStepComponent_pre_66_Template, 2, 1, "pre", 29);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](67);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](68, "app-strike-out", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](66, TwoStepComponent_pre_66_Template, 2, 1, "pre", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](67, "app-strike-out", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](68, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](69, "Most Repeated Numbers");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](70);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](71, TwoStepComponent_pre_71_Template, 2, 1, "pre", 30);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formGroup", ctx.radioGroupForm);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](21);
@@ -2215,7 +2271,7 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formControl", ctx.filterPattern);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.tableData)("columns", ctx.coulmns)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](37, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](36, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.tableData)("columns", ctx.coulmns)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](41, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](40, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 200);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
@@ -2229,19 +2285,23 @@ TwoStepComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.patternProbability)("columns", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction2"](41, _c5, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](39, _c3), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](40, _c4)))("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](45, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](44, _c6)))("headerHeight", 50)("footerHeight", 50)("limit", 5)("scrollbarH", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.patternProbability)("columns", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction2"](45, _c5, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](43, _c3), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](44, _c4)))("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](49, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](48, _c6)))("headerHeight", 50)("footerHeight", 50)("limit", 5)("scrollbarH", true);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.duplicateResults)("columns", ctx.coulmns)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](48, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](47, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rows", ctx.duplicateResults)("columns", ctx.coulmns)("sorts", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](52, _c2, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](51, _c1)))("headerHeight", 50)("footerHeight", 50)("limit", 10)("scrollbarH", true);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 120);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 220);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("innerHTML", ctx.ls.getPrettyJson(ctx.oddNumbersProbablity), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeHtml"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.combos);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.strike_out_numbers, "\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("strike_out_numbers", ctx.strike_out_numbers)("most_repeated_numbers", ctx.most_repeated_numbers)("less_repeated_numbers", ctx.less_repeated_numbers);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("", ctx.most_repeated_numbers == null ? null : ctx.most_repeated_numbers.size, "\n");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("strike_out_numbers", ctx.strike_out_numbers);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.most_repeated_numbers);
     } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupDirective"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbRadioGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControlName"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbButtonLabel"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbRadio"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControlDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_3__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_3__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_3__["DataTableColumnCellDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _strike_out_strike_out_component__WEBPACK_IMPORTED_MODULE_9__["StrikeOutComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgClass"], _pattern_pattern_component__WEBPACK_IMPORTED_MODULE_10__["PatternComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlYXR1cmUvY29tcG9uZW50cy90d28tc3RlcC90d28tc3RlcC5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](TwoStepComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],

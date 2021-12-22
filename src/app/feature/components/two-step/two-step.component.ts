@@ -35,6 +35,8 @@ export class TwoStepComponent implements OnInit {
   hostname: string;
   number_combination: Map<string, number>;
   strike_out_numbers: any[] = [];
+  most_repeated_numbers: any;
+  less_repeated_numbers: any;
 
   _data: any = [];
   tableData: any = [];
@@ -63,7 +65,7 @@ export class TwoStepComponent implements OnInit {
         this.oddNumbersProbablity = this.ls.getOddNumbersProbablity(this.data);
         this.strike_out_numbers = [];
         this.tableData.forEach((item, i) => {
-          if (i <= 5)
+          if (i <= 4)
             this.strike_out_numbers = [...this.strike_out_numbers, ...item.number]
         });
         this.strike_out_numbers = [...new Set(this.strike_out_numbers)].sort((a, b) => a - b);
@@ -71,6 +73,10 @@ export class TwoStepComponent implements OnInit {
         setTimeout(() => {
           this.combosObsevable.next(this.findNumberCombinations());
         }, 500);
+
+        setTimeout(() => {
+          this.findMostRepeatedNumbers();
+        }, 1000);
       });
     });
     this.gameControl.patchValue('CASH_FIVE');
@@ -80,13 +86,13 @@ export class TwoStepComponent implements OnInit {
     this.filterPattern.valueChanges.pipe(debounceTime(400)).subscribe(value => this.updateFilterForCode(value));
 
 
-    if (location.hostname === 'chennamouli.github.io') {
-      fetch(API_LOCAL.POWER_BALL_LIVE, { mode: 'no-cors' })
-        .then(value => {
-          console.log('Live Data: ', value);
-          alert('Retrieved live data!')
-        });
-    }
+    // if (location.hostname === 'chennamouli.github.io') {
+    //   fetch(API_LOCAL.POWER_BALL_LIVE, { mode: 'no-cors' })
+    //     .then(value => {
+    //       console.log('Live Data: ', value);
+    //       alert('Retrieved live data!')
+    //     });
+    // }
 
   }
 
@@ -147,6 +153,7 @@ export class TwoStepComponent implements OnInit {
     if (location.hostname === 'chennamouli.github.io'
       && (game === 'TWO_STEP' || game === 'MEGA_MILLIONS_LIVE' || game === 'POWER_BALL_LIVE' || game === 'CASH_FIVE_LIVE')) {
       dataObservable = from(fetch(API_LOCAL[game + '_LIVE'], { mode: 'no-cors' })) as any;
+      this.hostname = API_LOCAL[game + '_LIVE'];
     }
 
     return dataObservable
@@ -233,10 +240,10 @@ export class TwoStepComponent implements OnInit {
       const number = item.number || [];
       for (let i = 0; i < 5; i++) {
         for (let j = i + 1; j < 5; j++) {
-          for (let k = j + 1; k < 5; k++) {
-            const key = number[i] + "_" + number[j] + "_" + number[k];
-            this.number_combination[key] = (this.number_combination[key] || 0) + 1;
-          }
+          // for (let k = j + 1; k < 5; k++) {
+          const key = number[i] + "_" + number[j];//+ "_" + number[k];
+          this.number_combination[key] = (this.number_combination[key] || 0) + 1;
+          // }
         }
       }
     });
@@ -250,9 +257,36 @@ export class TwoStepComponent implements OnInit {
     }, 2000);
   }
 
+  findMostRepeatedNumbers() {
+    // console.log('findMostRepeatedNumbers', new Date())
+    const results = {};
+    this.tableData
+      // .filter((item, i) => i < 100)
+      .forEach(item => {
+        const number = item.number || [];
+        number.forEach(element => {
+          results[element] = (results[element] || 0) + 1;
+        });
+      })
+    let t = [...Object.entries(results)].sort((a: any, b: any) => b[1] - a[1]);
+    // console.log('Most repeated numbers', this.most_repeated_numbers = t);
+    // console.log('findMostRepeatedNumbers', new Date())
+    const l = t.slice(t.length / 2, t.length)
+      .map((item: any) => item[0] * 1);
+    const m = t.slice(0, t.length / 2)
+      .map((item: any) => item[0] * 1);
+    this.most_repeated_numbers = m; this.less_repeated_numbers = l;
+    console.log('****', this.most_repeated_numbers = m, this.less_repeated_numbers = l);
+  }
+
   get combos() {
     if (!this.number_combination) return null;
     return Array.from(this.number_combination).slice(0, 10);
+  }
+
+  get repeatedNumbers() {
+    if (!this.most_repeated_numbers) return null;
+    return this.most_repeated_numbers;
   }
 
 
